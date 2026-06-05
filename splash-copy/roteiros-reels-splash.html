@@ -1,0 +1,1279 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roteiros Reels — Promoção Medida Certa | Splash Campinas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap');
+
+    :root {
+      --azul-splash: #003B7A;
+      --azul-medio: #005BAA;
+      --aqua: #00AEEF;
+      --aqua-claro: #E6F7FF;
+      --ouro: #C9A84C;
+      --ouro-claro: #FFF8E6;
+      --branco: #FFFFFF;
+      --cinza-claro: #F4F7FB;
+      --cinza-borda: #DDE4EF;
+      --texto-escuro: #0A1628;
+      --texto-medio: #3A4A6B;
+      --texto-suave: #7A8EAA;
+      --verde: #22C55E;
+      --rodrigo-cor: #005BAA;
+      --hellen-cor: #7B2D8B;
+      --dupla-cor: #C9A84C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    /* HEADER */
+    .header {
+      background: linear-gradient(135deg, #002855 0%, #003B7A 45%, #005BAA 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(0,174,239,0.15) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--aqua), var(--ouro), var(--aqua));
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 40px 46px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(0,174,239,0.2);
+      border: 1px solid rgba(0,174,239,0.4);
+      color: var(--aqua);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .header h1 span {
+      color: var(--aqua);
+    }
+
+    .header-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 600px;
+      margin-bottom: 32px;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .header-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .header-meta-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--aqua);
+      flex-shrink: 0;
+    }
+
+    /* PRESENTER LEGEND */
+    .legend {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .legend-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 22px;
+      flex: 1;
+      min-width: 240px;
+      border-left: 4px solid var(--aqua);
+      box-shadow: 0 2px 12px rgba(0,59,122,0.07);
+    }
+
+    .legend-card.rodrigo { border-left-color: var(--rodrigo-cor); }
+    .legend-card.hellen  { border-left-color: var(--hellen-cor); }
+    .legend-card.dupla   { border-left-color: var(--ouro); }
+
+    .legend-name {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 15px;
+      margin-bottom: 4px;
+    }
+
+    .legend-name.rodrigo { color: var(--rodrigo-cor); }
+    .legend-name.hellen  { color: var(--hellen-cor); }
+    .legend-name.dupla   { color: var(--ouro); }
+
+    .legend-desc {
+      font-size: 12px;
+      color: var(--texto-medio);
+      line-height: 1.5;
+    }
+
+    /* SCRIPTS GRID */
+    .scripts-wrapper {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--texto-suave);
+      margin-bottom: 24px;
+    }
+
+    /* SCRIPT CARD */
+    .script-card {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,59,122,0.08);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    .script-header {
+      padding: 26px 32px 22px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--cinza-borda);
+    }
+
+    .script-header.rodrigo { background: linear-gradient(135deg, #EEF4FF 0%, #F8FAFF 100%); }
+    .script-header.hellen  { background: linear-gradient(135deg, #F9EEF9 0%, #FDF8FE 100%); }
+    .script-header.dupla   { background: linear-gradient(135deg, #FFF9EE 0%, #FDFBF6 100%); }
+
+    .script-num {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      color: var(--texto-suave);
+      text-transform: uppercase;
+      margin-bottom: 6px;
+    }
+
+    .script-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 20px;
+      font-weight: 800;
+      line-height: 1.2;
+      color: var(--texto-escuro);
+    }
+
+    .script-title span {
+      display: block;
+      font-size: 14px;
+      font-weight: 500;
+      color: var(--texto-medio);
+      margin-top: 4px;
+    }
+
+    .script-badges {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      gap: 6px;
+      flex-shrink: 0;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      padding: 5px 12px;
+      border-radius: 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-rodrigo { background: #DCEEFF; color: var(--rodrigo-cor); }
+    .badge-hellen  { background: #F3DEFF; color: var(--hellen-cor); }
+    .badge-dupla   { background: #FFF0CC; color: #8A5E00; }
+    .badge-tempo   { background: var(--cinza-claro); color: var(--texto-medio); border: 1px solid var(--cinza-borda); }
+    .badge-alvo    { background: #E6F7FF; color: #0074B0; }
+
+    /* SCRIPT BODY */
+    .script-body {
+      padding: 32px;
+    }
+
+    /* SCENES */
+    .scenes-list {
+      margin-bottom: 28px;
+    }
+
+    .scene-block {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 16px;
+      padding-bottom: 16px;
+      border-bottom: 1px dashed var(--cinza-borda);
+    }
+
+    .scene-block:last-child {
+      border-bottom: none;
+      margin-bottom: 0;
+      padding-bottom: 0;
+    }
+
+    .scene-type {
+      flex-shrink: 0;
+      width: 120px;
+    }
+
+    .scene-type-tag {
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 6px;
+    }
+
+    .tag-cena    { background: #E8F5E9; color: #2E7D32; }
+    .tag-fala    { background: #E3F2FD; color: #1565C0; }
+    .tag-texto   { background: #FFF8E1; color: #E65100; }
+    .tag-trilha  { background: #F3E5F5; color: #6A1B9A; }
+
+    .scene-content {
+      flex: 1;
+      font-size: 14px;
+      line-height: 1.65;
+      color: var(--texto-escuro);
+    }
+
+    .scene-content.fala {
+      font-weight: 500;
+      font-style: italic;
+      color: #0A2240;
+    }
+
+    .scene-content.texto-tela {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 13px;
+      color: #C65A00;
+      background: #FFF8E1;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border-left: 3px solid #FFA726;
+    }
+
+    .scene-content.trilha {
+      color: #6A1B9A;
+      font-size: 13px;
+    }
+
+    .scene-content.cena-desc {
+      color: var(--texto-medio);
+      font-size: 13px;
+    }
+
+    /* EXTRAS SECTIONS */
+    .extras-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-top: 24px;
+      padding-top: 24px;
+      border-top: 2px solid var(--cinza-borda);
+    }
+
+    .extra-box {
+      background: var(--cinza-claro);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+
+    .extra-box.full-width {
+      grid-column: 1 / -1;
+    }
+
+    .extra-box-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--aqua);
+      margin-bottom: 10px;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .extra-box-label .icon {
+      font-size: 14px;
+    }
+
+    .extra-box-content {
+      font-size: 13px;
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    .extra-box-content.legenda {
+      white-space: pre-line;
+    }
+
+    .hook-text {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 16px;
+      color: var(--azul-splash);
+      line-height: 1.3;
+    }
+
+    .direction-note {
+      color: var(--texto-medio);
+      font-style: italic;
+      font-size: 13px;
+    }
+
+    /* SCRIPT FOOTER */
+    .script-footer {
+      padding: 16px 32px;
+      background: var(--cinza-claro);
+      border-top: 1px solid var(--cinza-borda);
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .footer-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--texto-suave);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    /* SECTION DIVIDER */
+    .section-divider {
+      border: none;
+      border-top: 2px solid var(--cinza-borda);
+      margin: 8px 0 28px;
+    }
+
+    /* OFFER STRIP */
+    .offer-strip {
+      background: linear-gradient(135deg, var(--azul-splash), var(--azul-medio));
+      color: white;
+      padding: 24px 32px;
+      border-radius: 14px;
+      margin-bottom: 36px;
+    }
+
+    .offer-strip-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--aqua);
+      margin-bottom: 14px;
+    }
+
+    .offer-strip-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+    }
+
+    .offer-item {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.12);
+      border-radius: 10px;
+      padding: 12px 16px;
+    }
+
+    .offer-item-name {
+      font-size: 12px;
+      color: rgba(255,255,255,0.6);
+      margin-bottom: 4px;
+    }
+
+    .offer-item-price {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 800;
+      font-size: 18px;
+      color: white;
+    }
+
+    .offer-item-price.luxo {
+      color: var(--ouro);
+    }
+
+    .offer-item-detail {
+      font-size: 11px;
+      color: rgba(255,255,255,0.5);
+      margin-top: 2px;
+    }
+
+    /* PAGE FOOTER */
+    .page-footer {
+      background: var(--texto-escuro);
+      color: rgba(255,255,255,0.5);
+      text-align: center;
+      padding: 28px 40px;
+      font-size: 12px;
+    }
+
+    .page-footer strong {
+      color: var(--aqua);
+    }
+
+    /* PRINT */
+    @media print {
+      .script-card { break-inside: avoid; page-break-inside: avoid; }
+      .header::before, .header::after { display: none; }
+      body { background: white; }
+    }
+
+    @media (max-width: 700px) {
+      .header-inner { padding: 32px 20px; }
+      .header h1 { font-size: 26px; }
+      .scripts-wrapper { padding: 0 16px; }
+      .legend { padding: 0 16px; }
+      .script-header { flex-direction: column; }
+      .script-badges { flex-direction: row; align-items: flex-start; }
+      .script-body { padding: 20px 16px; }
+      .script-footer { padding: 14px 16px; }
+      .extras-grid { grid-template-columns: 1fr; }
+      .scene-type { width: 90px; }
+      .offer-strip { padding: 20px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">Splash Campinas — A Pioneira</div>
+    <h1>Roteiros de <span>Reels</span><br>Promoção Medida Certa</h1>
+    <p class="header-sub">6 roteiros completos — prontos para gravar. Cada um com cenas, falas, textos na tela, trilha, legenda e direção de câmera.</p>
+    <div class="header-meta">
+      <div class="header-meta-item"><span class="dot"></span> 6 roteiros distintos</div>
+      <div class="header-meta-item"><span class="dot"></span> Rodrigo + Hellen + Dupla</div>
+      <div class="header-meta-item"><span class="dot"></span> Versão Standard e Luxo</div>
+      <div class="header-meta-item"><span class="dot"></span> Piscina iGUi com SPA</div>
+    </div>
+  </div>
+</div>
+
+<!-- PRESENTER LEGEND -->
+<div class="legend">
+  <div class="legend-card rodrigo">
+    <div class="legend-name rodrigo">Rodrigo</div>
+    <div class="legend-desc">Dono da Splash. Fala com o homem que quer praticidade, entender o processo, a qualidade e o preço justo.</div>
+  </div>
+  <div class="legend-card hellen">
+    <div class="legend-name hellen">Hellen</div>
+    <div class="legend-desc">Dona da Splash. Fala com quem busca luxo, estética, bom gosto e transformação do espaço.</div>
+  </div>
+  <div class="legend-card dupla">
+    <div class="legend-name dupla">Rodrigo + Hellen</div>
+    <div class="legend-desc">Dupla dinâmica. Ele traz o racional, ela traz o aspiracional — ideal para atingir casais e públicos mistos.</div>
+  </div>
+</div>
+
+<!-- SCRIPTS WRAPPER -->
+<div class="scripts-wrapper" style="margin-top: 40px;">
+
+  <!-- OFFER REFERENCE STRIP -->
+  <div class="offer-strip">
+    <div class="offer-strip-title">Tabela de Referência da Promoção</div>
+    <div class="offer-strip-grid">
+      <div class="offer-item">
+        <div class="offer-item-name">6m Standard</div>
+        <div class="offer-item-price">R$ 17.970</div>
+        <div class="offer-item-detail">ou R$3.970 + 15x R$1.281</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">7m Standard</div>
+        <div class="offer-item-price">R$ 22.457</div>
+        <div class="offer-item-detail">consultar condições</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">8m Standard</div>
+        <div class="offer-item-price">R$ 26.942</div>
+        <div class="offer-item-detail">consultar condições</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">Versão Luxo</div>
+        <div class="offer-item-price luxo">a partir R$ 30.579</div>
+        <div class="offer-item-detail">Porcelana · Cascata · LED · Wi-Fi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Os 6 Roteiros Completos</div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 1 — RODRIGO | RESOLVE EM UMA LIGAÇÃO -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 01</div>
+        <div class="script-title">
+          "Resolve em uma conversa"
+          <span>Rodrigo fala com o homem que já quer, mas está travado</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-alvo">Homem Prático</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo em frente a uma piscina Splash instalada. Câmera próxima, enquadramento médio. Roupa casual mas arrumada. Olha direto para a câmera desde o início.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você tá pensando em colocar piscina há quanto tempo? Um ano? Dois?"</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">⏱️ Quanto tempo você tá esperando para ter a sua?</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Aqui na Splash Campinas você para de esperar hoje. Promoção Medida Certa — Piscina Tradicional com SPA, 6, 7 ou 8 metros, completa, instalada, pronta entrega."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ COMPLETA &nbsp;|&nbsp; ✅ INSTALADA &nbsp;|&nbsp; ✅ PRONTA ENTREGA</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A de 6 metros começa em R$ 17.970. Ou você dá uma entrada de R$ 3.970 e paga 15 parcelas de R$ 1.281. Cabe no bolso e cabe no quintal."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 6m a partir de R$ 17.970 &nbsp;|&nbsp; ou entrada + 15x R$ 1.281</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você me chama no WhatsApp, eu te respondo na hora. Uma conversa e você já sabe exatamente o que precisa. Sem enrolação, sem visita de surpresa, sem pressão."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📲 Link na bio — Chame agora no WhatsApp</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Splash Campinas, a pioneira. Tô te esperando."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música direta e confiante — sem exagero emocional. Estilo executivo-descontraído. Batida limpa, levemente moderna. Volume baixo para não competir com a voz.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">Você ainda tá pensando? Chegou a hora de resolver.
+
+Promoção Medida Certa Splash Campinas by iGUi — Piscina Tradicional com SPA, completa, instalada e pronta entrega nas medidas 6, 7 e 8 metros.
+
+👉 6m a partir de R$ 17.970 ou entrada + 15 parcelas
+👉 Sem surpresa: preço inclui instalação e SPA
+👉 Pronta entrega: sem esperar meses
+
+Chame no WhatsApp e descubra qual medida combina com sua casa. Uma conversa resolve tudo.
+
+#SplashCampinas #PiscinaComSPA #PromoçãoMedidaCerta #PiscinaInstalada #ProntaEntrega #iGUi</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"Piscina instalada por R$ 17.970 — sem pegadinha"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo começa com uma pergunta direta, olhando para a câmera como se estivesse falando com um amigo. Sem teleprompter visível. Tom de quem resolve — não de quem vende.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 2 — HELLEN | O SONHO QUE VOCÊ MERECE -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 02</div>
+        <div class="script-title">
+          "A piscina que transforma tudo"
+          <span>Hellen vende o lifestyle e a versão Luxo</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-alvo">Luxo &amp; Estética</span>
+        <span class="badge badge-tempo">⏱ ~55 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen sentada em área gourmet próxima a uma piscina linda. Luz natural do final da tarde. Enquadramento médio-próximo. Atmosfera de quem convida para sonhar.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você já imaginou olhar pela janela da sua casa e ver isso?"</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Corte rápido para imagem aspiracional: piscina com SPA, LED azul aceso, porcelana brilhando no sol, cascata funcionando.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Porque isso não é mais sonho de revista, não. Isso é a versão Luxo da nossa Promoção Medida Certa — e você pode ter instalada na sua casa."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Versão LUXO a partir de R$ 30.579</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Porcelana Atlas, cascata Plus, LED azul, clorador automático, aquecimento com controle Wi-Fi. Você controla tudo pelo celular — temperatura, iluminação, filtração."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📱 Controle Wi-Fi &nbsp;|&nbsp; Aquecimento Kelvin Inverter &nbsp;|&nbsp; LED azul &nbsp;|&nbsp; Porcelana Atlas</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Disponível em 6, 7 ou 8 metros. Dependendo do espaço da sua casa, a gente acha a medida certa pra você."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Me chama. Vamos conversar sobre como essa piscina vai transformar seu espaço — porque eu sei que você não quer qualquer piscina. Você quer a certa."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💙 Splash Campinas — A Pioneira &nbsp;|&nbsp; 📲 Link na Bio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música suave e sofisticada — tipo trilha de hotel boutique ou resort de luxo. Leve, aspiracional. Sem batida forte. Deixa o visual e a voz liderarem.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">Aquela piscina que você viu na revista? Ela cabe na sua casa.
+
+A versão Luxo da Promoção Medida Certa chegou com tudo:
+✨ Porcelana Atlas
+🌊 Cascata Plus
+💙 LED azul
+🌡️ Aquecimento Thermas Kelvin Inverter Wi-Fi
+📱 Quadro de comando digital
+
+A partir de R$ 30.579 instalada. Disponível em 6, 7 e 8 metros.
+
+Manda mensagem — vamos encontrar a piscina perfeita para o seu espaço.
+
+#SplashCampinas #PiscinaLuxo #PromoçãoMedidaCerta #PiscinaComSPA #PiscinaAspiracional #iGUiPiscinas</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"A piscina que faz sua área externa virar outro mundo"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Hellen começa com o olhar levemente distante (como se estivesse sonhando), depois volta para a câmera com sorriso cúmplice. A virada de "isso não é sonho de revista" deve ter energia — levanta a sobrancelha, faz contato visual forte.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 3 — RODRIGO | POR QUE ESSE PREÇO É REAL -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 03</div>
+        <div class="script-title">
+          "Por que esse preço é real?"
+          <span>Rodrigo desmonta o ceticismo com credibilidade técnica</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-alvo">Homem Cético</span>
+        <span class="badge badge-tempo">⏱ ~60 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo em pé, câmera próxima, tom sério e direto. Pode ter piscina ou showroom iGUi ao fundo. Postura de quem vai explicar algo importante.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Deixa eu te explicar por que esse preço não é cilada."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🤔 "Preço bom demais..." — Vamos conversar com honestidade.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Primeiro: a Splash Campinas trabalha com iGUi — maior fabricante de piscinas da América Latina. Isso não é produto de quintal. É a melhor tecnologia disponível no mercado."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏆 iGUi — Maior fabricante de piscinas da América Latina</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Segundo: essa promoção é pronta entrega. A piscina já está fabricada, aprovada, pronta pra sair. Isso elimina custo de produção extra e prazo de espera — e eu repasso essa economia pra você."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📦 Pronta entrega = custo operacional menor = preço mais honesto</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Terceiro: inclui SPA e instalação completa. Não vai aparecer custo escondido depois. O que eu falo, é o que você paga."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ SPA incluso &nbsp;|&nbsp; ✅ Instalação inclusa &nbsp;|&nbsp; ✅ Sem cobranças ocultas</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"6 metros por R$ 17.970. 7 metros por R$ 22.457. 8 metros por R$ 26.942. Se quiser entender mais a fundo, me chama. Eu explico tudo — sem pressa e sem pressão."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">6m → R$ 17.970 &nbsp;|&nbsp; 7m → R$ 22.457 &nbsp;|&nbsp; 8m → R$ 26.942</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Instrumental confiante — piano ou violão limpo. Sem batida intensa. Transmite seriedade e transparência. Tom de conversa entre pessoas que se respeitam.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">Preço bom demais pra ser verdade? Deixa eu explicar.
+
+A Promoção Medida Certa da Splash Campinas tem preço justo por 3 motivos:
+
+1️⃣ Produto iGUi — maior fabricante da América Latina
+2️⃣ Piscina pronta entrega — sem custo de produção extra
+3️⃣ Instalação e SPA já inclusos — sem surpresa no final
+
+6m → R$ 17.970 completo
+7m → R$ 22.457 completo
+8m → R$ 26.942 completo
+
+Quer entender melhor? Me chama no WhatsApp. Sem pressa, sem pressão.
+
+#SplashCampinas #PiscinaComQualidade #iGUi #TransparênciaNoPreço #PiscinaInstalada #Campinas</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"Piscina iGUi instalada por R$ 17.970 — 3 motivos pra não ter dúvida"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo usa os dedos pra contar os 3 pontos (1, 2, 3) — gestual simples que reforça a estrutura. Cada ponto deve ter uma micro-pausa antes. No final, sorriso leve: "sem pressão" deve ser dito de forma relaxada, não robótica.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 4 — HELLEN | QUAL MEDIDA É A SUA? -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 04</div>
+        <div class="script-title">
+          "Qual tamanho é o seu?"
+          <span>Hellen como consultora — ajuda a escolher entre 6, 7 e 8 metros</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-alvo">Decisão / Curadoria</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen com tablet ou referência visual na mão, num ambiente iluminado. Tom de consultora especialista mas acessível. Pode mostrar imagens de cada tamanho rapidamente.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você quer uma piscina mas não sabe qual tamanho pedir? Deixa eu te ajudar a escolher."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📏 6m, 7m ou 8m — qual é a medida certa para a sua casa?</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A de 6 metros é perfeita para quintais mais compactos. É a mais vendida da nossa promoção — funciona lindo pra casais e famílias. Espaço certinho, resultado incrível."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏠 6m — Quintais compactos e médios &nbsp;|&nbsp; R$ 17.970</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A de 7 metros já tem mais espaço pra nadar, receber amigos, colocar uma ilha flutuante. Se a área permite, eu sempre recomendo essa — ela equilibra espaço e preço muito bem."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏊 7m — Mais espaço, mais experiência &nbsp;|&nbsp; R$ 22.457</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A de 8 metros é pra quem não abre mão de nada. Grande, imponente. Dá outro status pra qualquer espaço externo."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">👑 8m — Impacto visual total &nbsp;|&nbsp; R$ 26.942</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Manda uma foto do seu quintal pra mim no WhatsApp. Em dois minutinhos eu te digo qual medida encaixa melhor — sem compromisso nenhum."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📲 Manda a foto — eu te respondo na hora! Link na bio.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música leve e animada — tipo consultoria descontraída. Ritmo suave mas com energia positiva. Nada pesado. Deixa a voz de Hellen fluir naturalmente.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">Não sabe qual tamanho de piscina pedir? Vou te ajudar.
+
+📏 6 metros — Para quintais compactos e médios. Perfeita pra casais e famílias. A partir de R$ 17.970.
+
+📏 7 metros — Mais espaço, mais experiência. Ideal pra quem gosta de receber. R$ 22.457.
+
+📏 8 metros — Grande e imponente. Status total. R$ 26.942.
+
+Todas com SPA, completas e instaladas. Versão Luxo com porcelana, cascata, LED e aquecimento Wi-Fi também disponível.
+
+Manda uma foto do seu quintal — eu te digo qual encaixa melhor.
+
+#SplashCampinas #PromoçãoMedidaCerta #PiscinaComSPA #QualTamanhoEscolher #iGUi #Campinas</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"6, 7 ou 8 metros? Qual cabe melhor na sua casa?"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Para cada medida, Hellen pode mostrar rapidamente uma imagem no tablet ou celular — corte rápido de 1-2 segundos na imagem e volta para o rosto dela. O final "manda a foto" deve ter energia de quem genuinamente vai ajudar — sorrir com o convite.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 5 — DUPLA | ELE QUER PREÇO, ELA QUER RESULTADO -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header dupla">
+      <div>
+        <div class="script-num">Roteiro 05</div>
+        <div class="script-title">
+          "Ele quer o preço. Ela quer o resultado."
+          <span>Rodrigo e Hellen em formato de dupla — ideal para casais e públicos mistos</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-dupla">Rodrigo + Hellen</span>
+        <span class="badge badge-alvo">Casal / Misto</span>
+        <span class="badge badge-tempo">⏱ ~70 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Abertura com Rodrigo. Pode estar em pé, câmera média. Começa com tom provocativo mas bem-humorado. Formato de corte alternado — Rodrigo fala, corta para Hellen, corta de volta.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Deixa eu falar pros homens: você tá procrastinando essa piscina há meses. Eu sei. A gente sempre adia."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📅 Meses planejando... sem sair do lugar?</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Promoção Medida Certa. 6 metros por R$ 17.970 completo e instalado. Ou entrada de R$ 3.970 e 15 parcelas de R$ 1.281. Simples assim."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 6m | R$ 17.970 &nbsp;|&nbsp; ou R$ 3.970 + 15x R$ 1.281</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">CORTE para Hellen — ela "entra em cena" com naturalidade, como se retomasse a conversa.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "E pra quem pensa no resultado final — na estética, no espaço que você vai criar — a versão Luxo muda completamente o nível da sua área externa."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Versão LUXO a partir de R$ 30.579</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Porcelana Atlas, cascata, LED azul, aquecimento Wi-Fi. É o tipo de piscina que você mostra pras amigas e elas perguntam onde você comprou."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">CORTE de volta para Rodrigo — pode terminar com os dois juntos no quadro.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Então: você resolve o preço, ela escolhe a versão — e a gente instala."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Chama a gente no WhatsApp. Splash Campinas — somos os pioneiros aqui em Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📲 Splash Campinas — A Pioneira &nbsp;|&nbsp; Link na Bio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música animada e moderna — com uma leve "virada" de energia quando Hellen entra em cena. Estilo dinâmico, jovial, mas sem exagero. Pode ter efeito de transição no corte.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">Ele quer o preço. Ela quer o resultado. A Splash tem os dois.
+
+Promoção Medida Certa — Piscina Tradicional com SPA:
+
+💰 Versão Standard completa a partir de R$ 17.970 (6 metros)
+✨ Versão Luxo a partir de R$ 30.579 — porcelana, cascata, LED, Wi-Fi
+
+6, 7 ou 8 metros — instalada e pronta entrega.
+
+Fala com a gente. Cada um vai ouvir o que precisa ouvir. 😄
+
+#SplashCampinas #PromoçãoMedidaCerta #PiscinaParaTodos #iGUi #PiscinaLuxo #PiscinaComSPA</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"Ele quer saber o preço. Ela quer ver o resultado. Temos os dois."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Os cortes entre Rodrigo e Hellen devem ser rápidos (máx. 2-3 seg cada). Cada um filma separado — edição cola os cortes. Rodrigo: ar de cumplicidade com o espectador. Hellen: tom de quem divide um segredo de luxo. O final "juntos" é opcional — pode ser dois frames separados na edição.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 6 — URGÊNCIA | ENQUANTO VOCÊ PENSA... -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 06</div>
+        <div class="script-title">
+          "Enquanto você espera, o vizinho já tá nadando"
+          <span>Diferencial pronta entrega — ativa quem está procrastinando</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-alvo">Urgência / Velocidade</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo em área externa com luz natural. Câmera próxima. Tom de quem vai revelar algo que o espectador não sabia. Expressão de "deixa eu te contar uma coisa".</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você sabia que a maioria das empresas de piscina tem prazo de 60, 90 dias para instalar depois que você fecha o contrato?"</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">⏳ Concorrência comum: 60 a 90 dias de espera após contrato</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Aqui na Splash Campinas, a história é outra. Promoção Medida Certa — piscina pronta entrega. Já fabricada, já aprovada, pronta pra ir direto pra sua casa."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ Splash Campinas: PRONTA ENTREGA — sem meses de espera</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Isso significa que você decide hoje e muito antes do que imagina você já tá curtindo a sua piscina com SPA no quintal."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏊 Decida hoje. Curta muito antes do que esperava.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"6, 7 ou 8 metros. A partir de R$ 17.970 completo e instalado. Versão Luxo com porcelana, cascata, LED e aquecimento Wi-Fi também disponível a partir de R$ 30.579."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">Standard: 6m R$ 17.970 &nbsp;|&nbsp; Luxo: a partir de R$ 30.579</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"O verão não espera. Splash Campinas, a pioneira. Me chama agora."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📲 Link na Bio — Chame no WhatsApp Agora</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música com energia crescente — começa mais calma na revelação do problema, sobe quando apresenta a solução. Batida motivacional, positiva. Transmite velocidade e ação, não ansiedade.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content legenda">A maioria das piscinas tem 60 a 90 dias de espera. Aqui não.
+
+Promoção Medida Certa Splash Campinas — piscina pronta entrega:
+
+✅ Já fabricada e aprovada
+✅ Instalação muito mais rápida
+✅ Você curte antes do que imagina
+
+6m → R$ 17.970 (ou entrada + 15x R$ 1.281)
+7m → R$ 22.457
+8m → R$ 26.942
+
+Versão Luxo também disponível a partir de R$ 30.579.
+
+O verão não espera. Você também não precisa.
+
+📲 Link na bio — chame agora no WhatsApp.
+
+Crédito sujeito à aprovação. Frete e instalação podem variar conforme condições locais. Preço base São Paulo.
+
+#SplashCampinas #ProntaEntrega #PromoçãoMedidaCerta #PiscinaRápida #iGUi #VerãoComPiscina</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa (Thumbnail)</div>
+          <div class="hook-text">"Enquanto você pensa, o vizinho já pediu a piscina dele"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo começa com postura de "deixa eu te contar um segredo" — levemente se aproxima da câmera na primeira frase. Na virada ("aqui na Splash, a história é outra") levanta o tom e fica mais ereto. O "o verão não espera" deve ter energia máxima — é a linha de fechamento. Sem sorrir exagerado — mais determinação.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <strong>Splash Campinas by iGUi</strong> — A Pioneira em Campinas<br>
+  Material de uso interno para produção de conteúdo. Crédito sujeito à aprovação. Frete e instalação podem variar conforme condições locais. Preços base São Paulo.
+</div>
+
+</body>
+</html>
