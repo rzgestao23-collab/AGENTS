@@ -1,0 +1,1094 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roteiros Últimos Dias — Promoção até 15/06 | Splash Campinas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap');
+
+    :root {
+      --azul-splash: #003B7A;
+      --azul-medio: #005BAA;
+      --aqua: #00AEEF;
+      --aqua-claro: #E6F7FF;
+      --ouro: #C9A84C;
+      --vermelho: #C0392B;
+      --vermelho-claro: #FDECEA;
+      --laranja: #E67E22;
+      --laranja-claro: #FEF3E2;
+      --branco: #FFFFFF;
+      --cinza-claro: #F4F7FB;
+      --cinza-borda: #DDE4EF;
+      --texto-escuro: #0A1628;
+      --texto-medio: #3A4A6B;
+      --texto-suave: #7A8EAA;
+      --rodrigo-cor: #005BAA;
+      --hellen-cor: #7B2D8B;
+      --dupla-cor: #C9A84C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    /* HEADER — URGÊNCIA */
+    .header {
+      background: linear-gradient(135deg, #1A0000 0%, #6B0000 40%, #C0392B 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -60%;
+      right: -5%;
+      width: 480px;
+      height: 480px;
+      background: radial-gradient(circle, rgba(255,100,50,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #E67E22, #C9A84C, #E67E22);
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 40px 46px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(255,100,50,0.2);
+      border: 1px solid rgba(255,150,80,0.4);
+      color: #FFA07A;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .header h1 span {
+      color: #FFA07A;
+    }
+
+    .header-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.75);
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    /* COUNTDOWN STRIP */
+    .countdown-strip {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 8px;
+    }
+
+    .countdown-box {
+      background: rgba(255,255,255,0.1);
+      border: 1px solid rgba(255,255,255,0.2);
+      border-radius: 10px;
+      padding: 10px 18px;
+      text-align: center;
+    }
+
+    .countdown-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 1;
+      color: #FFA07A;
+    }
+
+    .countdown-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.6);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .countdown-deadline {
+      align-self: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+      padding: 10px 0;
+    }
+
+    /* ALERT BANNER */
+    .alert-banner {
+      background: linear-gradient(90deg, #E67E22, #C0392B);
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+    }
+
+    .alert-banner span {
+      background: rgba(255,255,255,0.15);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin: 0 6px;
+    }
+
+    /* LEGEND */
+    .legend {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .legend-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 22px;
+      flex: 1;
+      min-width: 220px;
+      box-shadow: 0 2px 12px rgba(0,59,122,0.07);
+    }
+
+    .legend-card.rodrigo { border-left: 4px solid var(--rodrigo-cor); }
+    .legend-card.hellen  { border-left: 4px solid var(--hellen-cor); }
+    .legend-card.dupla   { border-left: 4px solid var(--ouro); }
+    .legend-card.urgencia { border-left: 4px solid var(--vermelho); }
+
+    .legend-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+    .legend-name.rodrigo { color: var(--rodrigo-cor); }
+    .legend-name.hellen  { color: var(--hellen-cor); }
+    .legend-name.dupla   { color: #8A6000; }
+    .legend-name.urgencia { color: var(--vermelho); }
+    .legend-desc { font-size: 12px; color: var(--texto-medio); line-height: 1.5; }
+
+    /* SCRIPTS */
+    .scripts-wrapper {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--texto-suave);
+      margin-bottom: 24px;
+    }
+
+    /* SCRIPT CARD */
+    .script-card {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,59,122,0.08);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    .script-header {
+      padding: 26px 32px 22px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--cinza-borda);
+    }
+
+    .script-header.rodrigo { background: linear-gradient(135deg, #EEF4FF 0%, #F8FAFF 100%); }
+    .script-header.hellen  { background: linear-gradient(135deg, #F9EEF9 0%, #FDF8FE 100%); }
+    .script-header.dupla   { background: linear-gradient(135deg, #FFF9EE 0%, #FDFBF6 100%); }
+    .script-header.urgencia { background: linear-gradient(135deg, #FFF0EE 0%, #FFF8F7 100%); }
+
+    .script-num { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--texto-suave); text-transform: uppercase; margin-bottom: 6px; }
+
+    .script-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; line-height: 1.2; color: var(--texto-escuro); }
+    .script-title span { display: block; font-size: 14px; font-weight: 500; color: var(--texto-medio); margin-top: 4px; }
+
+    .script-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+
+    .badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
+    .badge-rodrigo { background: #DCEEFF; color: var(--rodrigo-cor); }
+    .badge-hellen  { background: #F3DEFF; color: var(--hellen-cor); }
+    .badge-dupla   { background: #FFF0CC; color: #8A5E00; }
+    .badge-urgencia { background: #FFE5E2; color: var(--vermelho); }
+    .badge-tempo   { background: var(--cinza-claro); color: var(--texto-medio); border: 1px solid var(--cinza-borda); }
+    .badge-deadline { background: #FDECEA; color: var(--vermelho); border: 1px solid #FFCDD2; }
+
+    /* BODY */
+    .script-body { padding: 32px; }
+
+    .scenes-list { margin-bottom: 28px; }
+
+    .scene-block { display: flex; gap: 16px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed var(--cinza-borda); }
+    .scene-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .scene-type { flex-shrink: 0; width: 120px; }
+
+    .scene-type-tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; }
+    .tag-cena   { background: #E8F5E9; color: #2E7D32; }
+    .tag-fala   { background: #E3F2FD; color: #1565C0; }
+    .tag-texto  { background: #FFF8E1; color: #E65100; }
+    .tag-trilha { background: #F3E5F5; color: #6A1B9A; }
+
+    .scene-content { flex: 1; font-size: 14px; line-height: 1.65; color: var(--texto-escuro); }
+    .scene-content.fala { font-weight: 500; font-style: italic; color: #0A2240; }
+    .scene-content.texto-tela { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; color: #C65A00; background: #FFF8E1; padding: 8px 12px; border-radius: 8px; border-left: 3px solid #FFA726; }
+    .scene-content.texto-tela.vermelho { color: var(--vermelho); background: #FDECEA; border-left-color: #EF5350; }
+    .scene-content.trilha { color: #6A1B9A; font-size: 13px; }
+    .scene-content.cena-desc { color: var(--texto-medio); font-size: 13px; }
+
+    /* EXTRAS */
+    .extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--cinza-borda); }
+    .extra-box { background: var(--cinza-claro); border-radius: 12px; padding: 18px 20px; }
+    .extra-box.full-width { grid-column: 1 / -1; }
+    .extra-box-label { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--vermelho); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .extra-box-label .icon { font-size: 14px; }
+    .extra-box-content { font-size: 13px; color: var(--texto-escuro); line-height: 1.6; white-space: pre-line; }
+    .hook-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; color: var(--vermelho); line-height: 1.3; }
+    .direction-note { color: var(--texto-medio); font-style: italic; font-size: 13px; }
+
+    /* URGENCY TAG ON CARD */
+    .urgency-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--vermelho);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 0 0 10px 10px;
+      margin-left: 32px;
+      margin-top: -1px;
+    }
+
+    /* OFFER STRIP */
+    .offer-strip {
+      background: linear-gradient(135deg, #1A0000, #6B0000);
+      color: white;
+      padding: 24px 32px;
+      border-radius: 14px;
+      margin-bottom: 36px;
+    }
+
+    .offer-strip-title { font-family: 'Montserrat', sans-serif; font-size: 13px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: #FFA07A; margin-bottom: 14px; }
+
+    .offer-strip-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 12px; }
+
+    .offer-item { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.12); border-radius: 10px; padding: 12px 16px; }
+    .offer-item-name { font-size: 12px; color: rgba(255,255,255,0.6); margin-bottom: 4px; }
+    .offer-item-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 18px; color: white; }
+    .offer-item-price.luxo { color: var(--ouro); }
+    .offer-item-detail { font-size: 11px; color: rgba(255,255,255,0.5); margin-top: 2px; }
+
+    /* PAGE FOOTER */
+    .page-footer { background: #0A1628; color: rgba(255,255,255,0.5); text-align: center; padding: 28px 40px; font-size: 12px; }
+    .page-footer strong { color: #FFA07A; }
+
+    @media (max-width: 700px) {
+      .header-inner { padding: 32px 20px; }
+      .header h1 { font-size: 26px; }
+      .scripts-wrapper { padding: 0 16px; }
+      .legend { padding: 0 16px; }
+      .script-header { flex-direction: column; }
+      .script-badges { flex-direction: row; align-items: flex-start; }
+      .script-body { padding: 20px 16px; }
+      .extras-grid { grid-template-columns: 1fr; }
+      .scene-type { width: 90px; }
+      .countdown-strip { gap: 8px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ALERT BANNER -->
+<div class="alert-banner">
+  🔴 ÚLTIMOS DIAS — Promoção Medida Certa encerra em <span>15 de junho</span> — Após essa data, preços retornam ao valor cheio
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">Splash Campinas — Semana Final da Promoção</div>
+    <h1>Roteiros de <span>Urgência</span><br>Últimos Dias da Promoção</h1>
+    <p class="header-sub">6 roteiros para a semana final — 09 a 15/06. Contagem regressiva, escassez real e último chamado para quem ainda não decidiu.</p>
+    <div class="countdown-strip">
+      <div class="countdown-box">
+        <div class="countdown-num">6</div>
+        <div class="countdown-label">Dias</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num">até</div>
+        <div class="countdown-label">&nbsp;</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num">15/06</div>
+        <div class="countdown-label">Encerramento</div>
+      </div>
+      <div class="countdown-deadline">Depois dessa data, preço volta ao valor cheio.</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-card rodrigo">
+    <div class="legend-name rodrigo">Rodrigo</div>
+    <div class="legend-desc">Urgência racional — prazo, preço, estoque e consequência de não decidir.</div>
+  </div>
+  <div class="legend-card hellen">
+    <div class="legend-name hellen">Hellen</div>
+    <div class="legend-desc">Urgência emocional — última chance de ter a piscina ideal antes do verão.</div>
+  </div>
+  <div class="legend-card dupla">
+    <div class="legend-name dupla">Rodrigo + Hellen</div>
+    <div class="legend-desc">Chamada final em dupla — fecha o ciclo da promoção com energia máxima.</div>
+  </div>
+</div>
+
+<!-- SCRIPTS WRAPPER -->
+<div class="scripts-wrapper" style="margin-top: 40px;">
+
+  <!-- OFFER STRIP -->
+  <div class="offer-strip">
+    <div class="offer-strip-title">🔴 Oferta válida até 15/06 — Tabela de Preços</div>
+    <div class="offer-strip-grid">
+      <div class="offer-item">
+        <div class="offer-item-name">6m Standard</div>
+        <div class="offer-item-price">R$ 17.970</div>
+        <div class="offer-item-detail">ou R$3.970 + 15x R$1.281</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">7m Standard</div>
+        <div class="offer-item-price">R$ 22.457</div>
+        <div class="offer-item-detail">consultar condições</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">8m Standard</div>
+        <div class="offer-item-price">R$ 26.942</div>
+        <div class="offer-item-detail">consultar condições</div>
+      </div>
+      <div class="offer-item">
+        <div class="offer-item-name">Versão Luxo</div>
+        <div class="offer-item-price luxo">a partir R$ 30.579</div>
+        <div class="offer-item-detail">Porcelana · Cascata · LED · Wi-Fi</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">Os 6 Roteiros de Urgência — Semana Final</div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 1 — RODRIGO | FALTAM 6 DIAS -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar: 09/06</div>
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 01</div>
+        <div class="script-title">
+          "Faltam 6 dias. Sem segunda chance."
+          <span>Rodrigo abre a semana com contagem regressiva direta</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-deadline">🗓️ Encerra 15/06</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo olha direto para a câmera, tom sério mas sem drama. Pode mostrar um calendário, dedos marcando "6" ou simplesmente falar com energia alta. Fundo: loja ou piscina instalada.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Seis dias. É o que falta para a Promoção Medida Certa da Splash Campinas encerrar. Dia quinze de junho, acabou."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 ÚLTIMOS 6 DIAS — Promoção encerra 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você que tá pensando, pesquisando, 'vou ver mais um pouco' — esse é o aviso: não tem mais segunda chance nesse preço. Piscina Tradicional com SPA, completa e instalada, a partir de R$ 17.970. Pronta entrega aqui em Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 A partir de R$ 17.970 instalada &nbsp;|&nbsp; 6, 7 e 8 metros</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Depois do dia 15, os preços voltam ao valor cheio. Sem promoção, sem condição especial, sem essa entrada."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">⚠️ Após 15/06 — preços voltam ao valor cheio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Clica no link da bio, me chama no WhatsApp. Hoje você resolve. Essa semana você fecha. Splash Campinas, a pioneira."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 CHAME AGORA — Link na bio | Encerra 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Beat tenso e crescente — começa seco e ganha corpo quando Rodrigo apresenta o preço. Estilo "urgência motivacional". Volume que sobe nos últimos 5 segundos.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Aviso: faltam 6 dias. 🔴
+
+A Promoção Medida Certa da Splash Campinas encerra no dia 15 de junho. Depois disso, preços voltam ao valor cheio — sem condição especial, sem essa entrada, sem essa parcela.
+
+✅ Piscina iGUi com SPA — completa e instalada
+✅ 6m a partir de R$ 17.970 (ou entrada + 15x R$1.281)
+✅ 7m → R$ 22.457 | 8m → R$ 26.942
+✅ Pronta entrega em Campinas
+
+Se você tá pesquisando há semanas, essa é a semana de decidir.
+
+📲 Link na bio — chame no WhatsApp.
+
+#SplashCampinas #UltimosDias #EncerraEm15 #PromoçãoMedidaCerta #iGUi #PiscinaComSPA</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Faltam 6 dias para essa promoção acabar. Sério."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo começa mostrando os 6 dedos para a câmera — gesto simples e impactante. Tom firme, sem sorriso nos primeiros 15 segundos. Só alivia no final quando faz o CTA do WhatsApp.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 2 — HELLEN | ÚLTIMA CHANCE DO LUXO -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar: 10/06</div>
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 02</div>
+        <div class="script-title">
+          "Última chance de ter essa piscina nesse preço"
+          <span>Hellen — chamada final para a versão Luxo</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 15/06</span>
+        <span class="badge badge-tempo">⏱ ~55 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen em frente à piscina ou em área bonita da loja. Tom menos aspiracional que o Roteiro 2 anterior — agora tem um peso de "isso vai acabar". Expressão mista de carinho e urgência genuína.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Você já salvou aquela foto da piscina que você quer ter um dia? Já mostrou pro seu marido, pro seu namorado, sonhou com aquela área externa linda?"</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📱 Aquela foto que você salvou... está esperando virar realidade.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Eu preciso te contar que essa semana é a última semana que você consegue a versão Luxo da nossa Promoção Medida Certa com essas condições. Dia quinze de junho, essa oferta encerra."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 ÚLTIMA SEMANA — Versão Luxo com condição especial até 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Porcelana Atlas nas bordas, cascata Plus, LED azul, aquecimento com Wi-Fi, clorador automático. A partir de R$ 30.579 — instalada, completa, pronta entrega. É a piscina que você sempre quis, com o preço que você não vai mais encontrar depois de domingo que vem."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Versão LUXO — Porcelana Atlas · Cascata · LED · Wi-Fi &nbsp;|&nbsp; a partir de R$ 30.579</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Me chama hoje. Não espera mais. Você já esperou o suficiente."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Me chama HOJE — Link na bio. Encerra 15/06.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música elegante mas com tensão leve — tipo trilha de luxo com urgência. Pode começar com o som aspiracional do Roteiro 2 e ganhar uma camada de peso quando ela fala "última semana".</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Aquela piscina que você sempre quis? Última chance. 🔴
+
+A Promoção Medida Certa encerra no dia 15 de junho. Depois disso, as condições especiais não se repetem.
+
+A versão Luxo inclui:
+✦ Porcelana Atlas
+✦ Cascata Plus
+✦ LED azul
+✦ Aquecimento Thermas Kelvin Inverter Wi-Fi
+✦ Clorador automático
+✦ Quadro de comando digital
+
+A partir de R$ 30.579 — completa, instalada, pronta entrega.
+
+Você já esperou demais. Me chama agora. 👇
+
+#SplashCampinas #PiscinaLuxo #UltimaChance #PromoçãoMedidaCerta #EncerraEm15 #iGUi</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Última semana com essa piscina nesse preço. Depois não tem mais."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Hellen começa quase sussurrando — íntima, como se falasse para a câmera como uma amiga. A virada em "eu preciso te contar" deve ter um leve peso emocional real — não drama, mas seriedade. O "você já esperou o suficiente" é a linha mais poderosa — pausa antes e diz com cuidado.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 3 — RODRIGO | O QUE MUDA DEPOIS DO DIA 15 -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar: 11/06</div>
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 03</div>
+        <div class="script-title">
+          "O que muda depois do dia 15?"
+          <span>Rodrigo explica a consequência real de não decidir agora</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-deadline">🗓️ Encerra 15/06</span>
+        <span class="badge badge-tempo">⏱ ~55 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo em tom educativo e honesto — como um amigo que vai te dizer o que vai acontecer se você não agir. Braços relaxados, linguagem corporal aberta. Sem sensacionalismo.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Deixa eu te explicar exatamente o que muda depois do dia quinze de junho."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">⏳ Depois de 15/06 — o que muda?</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Primeiro: a piscina de 6 metros que hoje sai por R$ 17.970 completa volta para o preço cheio — R$ 25.092. Isso é uma diferença de mais de R$ 7 mil."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">❌ Após 15/06: 6m volta a R$ 25.092 &nbsp;|&nbsp; Economia perdida: R$ 7.122</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Segundo: a entrada e o parcelamento especial encerram. Essa condição de R$ 3.970 de entrada com 15 parcelas — não existe mais depois dessa semana."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">❌ Entrada R$3.970 + 15x R$1.281 — só até 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Terceiro: as piscinas de pronta entrega que estão aqui agora saem. Quando acabar o estoque dessa promoção, acabou — e a próxima piscina vai precisar de prazo de produção."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">❌ Pronta entrega — disponível enquanto durar o estoque</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Eu não tô criando pressão. Tô te passando as informações que você precisa ter. Me chama essa semana. Splash Campinas, a pioneira."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">📲 Chame agora — Link na bio | Até 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Instrumental sério e limpo — sem drama. Cada "negativo" pode ter um leve efeito sonoro discreto (tipo um "X" marcado). O tom geral é de análise factual, não de alarme.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content">O que muda depois do dia 15 de junho? Eu vou te contar.
+
+❌ 6m: sai de R$17.970 e volta para R$25.092 (+R$7.122)
+❌ Entrada de R$3.970 + 15x R$1.281 — não existe mais
+❌ Piscinas de pronta entrega saem do estoque
+
+Não tô criando pressão — só tô te passando as informações que você precisa ter.
+
+A Promoção Medida Certa encerra segunda-feira, 15/06.
+
+📲 Me chama essa semana. Link na bio.
+
+*Crédito sujeito à aprovação. Preço base São Paulo.*
+
+#SplashCampinas #UltimaChance #EncerraEm15 #PromoçãoMedidaCerta #iGUi #PiscinaInstalada</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"O que muda depois do dia 15? Eu explico tudo aqui."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo usa os dedos para enumerar os 3 pontos como no Roteiro 3 anterior — mas aqui o tom é mais sério. Para cada "X" pode fazer um gesto de riscar no ar. O "não tô criando pressão" final é fundamental — diz isso olhando direto pra câmera, quase se inclinando levemente.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 4 — HELLEN | O VERÃO TÁ CHEGANDO -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar: 12/06</div>
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 04</div>
+        <div class="script-title">
+          "Você vai chegar no verão sem piscina de novo?"
+          <span>Hellen ativa o FOMO do verão — dor de quem adiou e se arrependeu</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 15/06</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen com expressão de cumplicidade — como se soubesse um segredo que a câmera sabe junto com ela. Pode gesticular lembrando "aquela sensação" de verão chegando.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Dezembro vai chegar. O calor vai bater. Seus filhos vão pedir piscina. Seus amigos vão marcar aquele churrasco..."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">☀️ Dezembro. Calor. Família. Amigos. E a sua piscina?</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"E você vai lembrar que em junho tinha uma promoção. Que a piscina estava pronta, instalada, parcelada, no preço que cabia. E você deixou passar."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">😔 "Eu devia ter fechado em junho..." — Não deixa isso acontecer.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A Promoção Medida Certa encerra no dia 15 de junho. Piscina iGUi com SPA, completa e instalada, 6, 7 ou 8 metros. A partir de R$ 17.970 na versão Standard. Ou versão Luxo com porcelana, cascata e aquecimento Wi-Fi, a partir de R$ 30.579."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ Standard: a partir de R$ 17.970 &nbsp;|&nbsp; ✨ Luxo: a partir de R$ 30.579</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Essa semana você garante o verão com piscina. Me chama."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Garanta o verão agora — encerra 15/06 | Link na bio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Começa melancólico-saudosista (a dor de quem adiou) e muda para algo mais positivo e animado quando Hellen apresenta a solução. Contraste emocional intencional.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Dezembro vai chegar. O calor vai bater. Você vai lembrar dessa promoção? 🌞
+
+A Promoção Medida Certa da Splash Campinas encerra no dia 15 de junho.
+
+Não passa outro verão sem a sua piscina.
+
+🏊 6m Standard a partir de R$ 17.970 instalada
+🏊 7m → R$ 22.457 | 8m → R$ 26.942
+✨ Versão Luxo a partir de R$ 30.579
+
+Piscina iGUi com SPA, pronta entrega, instalação especializada.
+
+Você tem até domingo. Chama a gente agora. 👇
+
+#SplashCampinas #VerãoComPiscina #PromoçãoMedidaCerta #UltimaChance #EncerraEm15 #iGUi</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Você vai chegar no verão sem piscina de novo?"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Hellen começa com um tom quase narrativo — como se estivesse contando uma história que todo mundo já viveu. A pausa após "E você deixou passar" é crucial — 2 segundos de silêncio antes de virar para a solução. A virada deve ser suave, não brusca.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 5 — DUPLA | CHAMADA FINAL JUNTOS -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar: 13/06</div>
+    <div class="script-header dupla">
+      <div>
+        <div class="script-num">Roteiro 05</div>
+        <div class="script-title">
+          "Semana final. Decisão de agora."
+          <span>Rodrigo e Hellen fecham a promoção com energia máxima</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-dupla">Rodrigo + Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 15/06</span>
+        <span class="badge badge-tempo">⏱ ~60 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo e Hellen juntos, podendo iniciar com os dois no quadro ou em cortes alternados rápidos. Tom de urgência coletiva — como se os dois estivessem igualmente convictos de que essa é a hora.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Essa é a semana final da Promoção Medida Certa aqui na Splash Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "No dia 15 de junho, essa promoção encerra. Sem prorrogação, sem nova rodada com esse preço."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 SEMANA FINAL — Encerra 15/06. Sem prorrogação.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Para quem quer praticidade e preço: 6 metros a partir de R$ 17.970, completa, instalada, pronta entrega. Entrada de R$ 3.970 e 15 parcelas de R$ 1.281."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 6m | R$ 17.970 &nbsp;|&nbsp; ou R$ 3.970 + 15x R$ 1.281</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Para quem quer o melhor: versão Luxo com porcelana Atlas, cascata, LED azul e aquecimento Wi-Fi — a partir de R$ 30.579. Essa é a última oportunidade com essas condições."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Versão Luxo a partir de R$ 30.579 &nbsp;|&nbsp; Última oportunidade.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Você tem essa semana."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Usa ela. Chama a gente."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[OS DOIS] "Splash Campinas — a pioneira."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Splash Campinas — A Pioneira &nbsp;|&nbsp; Link na Bio &nbsp;|&nbsp; Encerra 15/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música com energia alta do início ao fim — beat motivacional, urgente mas positivo. Pode ter um crescimento nos últimos 10 segundos. Ideal: algo que transmita "agora ou nunca" sem ansiedade.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Semana final. Sem segunda chance. 🔴
+
+A Promoção Medida Certa da Splash Campinas encerra no dia 15 de junho. Não tem prorrogação.
+
+💼 Versão Standard: 6m a partir de R$17.970 (instalada, com SPA)
+💎 Versão Luxo: a partir de R$30.579 (porcelana, cascata, LED, Wi-Fi)
+
+📐 Medidas disponíveis: 6m, 7m e 8 metros
+🚚 Pronta entrega em Campinas
+✅ Produto iGUi — líder da América Latina
+
+Você tem até domingo. Clica no link da bio agora. 👇
+
+*Crédito sujeito à aprovação. Frete e instalação podem variar.*
+
+#SplashCampinas #SemanaFinal #EncerraEm15 #PromoçãoMedidaCerta #iGUi #PiscinaComSPA</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Semana final. Sem prorrogação. Sem segunda chance."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Os dois podem começar juntos no quadro — a dupla em cena ao mesmo tempo impacta mais nesse momento de encerramento. Os cortes alternados dos outros roteiros aqui dão lugar à unidade. O "Splash Campinas — a pioneira" falado juntos deve ter timing idêntico — ensaiar esse momento específico.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 6 — RODRIGO | DIA 15 — ÚLTIMO DIA -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🔴 Gravar e publicar: 15/06 — manhã cedo</div>
+    <div class="script-header urgencia">
+      <div>
+        <div class="script-num">Roteiro 06</div>
+        <div class="script-title">
+          "Hoje é o último dia. Literalmente."
+          <span>Rodrigo no dia D — urgência máxima, tom final definitivo</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-urgencia">DIA D</span>
+        <span class="badge badge-deadline">📅 Publicar 15/06 manhã</span>
+        <span class="badge badge-tempo">⏱ ~40 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo de frente — sem muito contexto visual. Pode estar em qualquer lugar: loja, piscina ou até celular de mão mesmo. O que importa é a energia. Tom definitivo. Pode ser filmado no próprio celular pela manhã do dia 15.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Hoje. Hoje é o último dia."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 HOJE — 15/06 — ÚLTIMO DIA DA PROMOÇÃO</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A Promoção Medida Certa da Splash Campinas encerra hoje. Se você ficou essa semana pensando — esse é o momento. Não tem amanhã nesse preço."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">❌ Amanhã, esse preço não existe mais.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Piscina iGUi com SPA, 6, 7 ou 8 metros, completa, instalada e pronta entrega. A partir de R$ 17.970. Versão Luxo a partir de R$ 30.579."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ Standard: R$ 17.970 &nbsp;|&nbsp; ✨ Luxo: R$ 30.579 &nbsp;|&nbsp; Encerra HOJE</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Me chama agora. Hoje. Splash Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 ME CHAMA AGORA — Link na bio | HOJE é o último dia</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Pode ser sem música — apenas voz e silêncio. Ou com uma batida seca e urgente. Esse roteiro é curto e direto — a brevidade é a mensagem.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span class="icon">📝</span> Legenda do Post — publicar 15/06 às 7h</div>
+          <div class="extra-box-content">🔴 HOJE É O ÚLTIMO DIA.
+
+A Promoção Medida Certa da Splash Campinas encerra hoje, 15 de junho. Amanhã, preços voltam ao valor cheio.
+
+✅ 6m com SPA: R$ 17.970 (ou entrada + 15x R$1.281)
+✅ 7m: R$ 22.457
+✅ 8m: R$ 26.942
+✨ Versão Luxo a partir de R$ 30.579
+
+Pronta entrega. Instalação especializada. Produto iGUi.
+
+Você tem o dia de hoje. Me chama agora.
+
+📲 Link na bio — WhatsApp direto.
+
+*Crédito sujeito à aprovação.*
+
+#SplashCampinas #HojeÉOÚltimoDia #EncerraHoje #PromoçãoMedidaCerta #iGUi #ÚltimaChance</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"HOJE É O ÚLTIMO DIA. Depois não tem mais."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span class="icon">🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Esse roteiro pode ser gravado de manhã cedo do dia 15, no celular mesmo — a espontaneidade reforça a urgência real. Rodrigo não precisa estar produzido: camiseta, local real, sem glamour. A autenticidade do "aqui agora, gravando isso pra você" é o diferencial desse Reel.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <strong>Splash Campinas by iGUi — A Pioneira</strong> — Semana Final da Promoção Medida Certa &nbsp;|&nbsp; Encerra 15/06/2026<br>
+  Material de uso interno para produção de conteúdo. Crédito sujeito à aprovação. Frete e instalação podem variar. Preços base São Paulo.
+</div>
+
+</body>
+</html>
