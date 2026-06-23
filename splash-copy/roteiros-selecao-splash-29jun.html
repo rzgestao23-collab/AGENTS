@@ -1,0 +1,1226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Roteiros Últimos Dias — Promoção Seleção Splash até 29/06 | Splash Campinas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap');
+
+    :root {
+      --verde: #006400;
+      --verde-medio: #1B8A00;
+      --verde-claro: #E6F4E0;
+      --amarelo: #F5C000;
+      --amarelo-claro: #FFFBE6;
+      --azul-splash: #003B7A;
+      --azul-medio: #005BAA;
+      --aqua: #00AEEF;
+      --ouro: #C9A84C;
+      --vermelho: #C0392B;
+      --vermelho-claro: #FDECEA;
+      --branco: #FFFFFF;
+      --cinza-claro: #F4F7FB;
+      --cinza-borda: #DDE4EF;
+      --texto-escuro: #0A1628;
+      --texto-medio: #3A4A6B;
+      --texto-suave: #7A8EAA;
+      --rodrigo-cor: #005BAA;
+      --hellen-cor: #7B2D8B;
+      --dupla-cor: #C9A84C;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    /* HEADER — SELEÇÃO SPLASH */
+    .header {
+      background: linear-gradient(135deg, #001A00 0%, #004000 45%, #006400 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40%;
+      right: -8%;
+      width: 500px;
+      height: 500px;
+      background: radial-gradient(circle, rgba(245,192,0,0.12) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--amarelo), #FFF, var(--verde-medio), #FFF, var(--amarelo));
+    }
+
+    .header-inner {
+      max-width: 1100px;
+      margin: 0 auto;
+      padding: 50px 40px 46px;
+      position: relative;
+      z-index: 1;
+    }
+
+    .header-badge {
+      display: inline-block;
+      background: rgba(245,192,0,0.15);
+      border: 1px solid rgba(245,192,0,0.4);
+      color: var(--amarelo);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      padding: 6px 14px;
+      border-radius: 20px;
+      margin-bottom: 20px;
+    }
+
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 38px;
+      font-weight: 900;
+      line-height: 1.15;
+      margin-bottom: 12px;
+      letter-spacing: -0.5px;
+    }
+
+    .header h1 .destaque { color: var(--amarelo); }
+    .header h1 .marca { color: #5BE85B; }
+
+    .header-sub {
+      font-size: 16px;
+      color: rgba(255,255,255,0.78);
+      max-width: 620px;
+      margin-bottom: 28px;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-top: 4px;
+    }
+
+    .header-meta-item {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 13px;
+      color: rgba(255,255,255,0.7);
+    }
+
+    .header-meta-item .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--amarelo);
+      flex-shrink: 0;
+    }
+
+    /* ALERT BANNER */
+    .alert-banner {
+      background: linear-gradient(90deg, var(--verde), #008000, var(--verde));
+      color: white;
+      text-align: center;
+      padding: 14px 20px;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      letter-spacing: 0.5px;
+      border-bottom: 3px solid var(--amarelo);
+    }
+
+    .alert-banner span {
+      background: var(--amarelo);
+      color: #1A1A00;
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin: 0 6px;
+    }
+
+    /* COUNTDOWN */
+    .countdown-strip {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .countdown-box {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(245,192,0,0.3);
+      border-radius: 10px;
+      padding: 10px 18px;
+      text-align: center;
+    }
+
+    .countdown-num {
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 900;
+      font-size: 28px;
+      line-height: 1;
+      color: var(--amarelo);
+    }
+
+    .countdown-label {
+      font-size: 11px;
+      color: rgba(255,255,255,0.55);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-top: 2px;
+    }
+
+    .countdown-deadline {
+      align-self: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      color: rgba(255,255,255,0.85);
+    }
+
+    /* LEGEND */
+    .legend {
+      max-width: 1100px;
+      margin: 32px auto 0;
+      padding: 0 40px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+
+    .legend-card {
+      background: white;
+      border-radius: 12px;
+      padding: 18px 22px;
+      flex: 1;
+      min-width: 220px;
+      box-shadow: 0 2px 12px rgba(0,59,122,0.07);
+    }
+
+    .legend-card.rodrigo { border-left: 4px solid var(--rodrigo-cor); }
+    .legend-card.hellen  { border-left: 4px solid var(--hellen-cor); }
+    .legend-card.dupla   { border-left: 4px solid var(--amarelo); }
+
+    .legend-name { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; margin-bottom: 4px; }
+    .legend-name.rodrigo { color: var(--rodrigo-cor); }
+    .legend-name.hellen  { color: var(--hellen-cor); }
+    .legend-name.dupla   { color: #7A5C00; }
+    .legend-desc { font-size: 12px; color: var(--texto-medio); line-height: 1.5; }
+
+    /* SCRIPTS WRAPPER */
+    .scripts-wrapper {
+      max-width: 1100px;
+      margin: 40px auto 60px;
+      padding: 0 40px;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--texto-suave);
+      margin-bottom: 24px;
+    }
+
+    /* OFFER STRIP */
+    .offer-strip {
+      background: linear-gradient(135deg, #001A00, #004000);
+      color: white;
+      padding: 24px 32px;
+      border-radius: 14px;
+      margin-bottom: 16px;
+      border: 1px solid rgba(245,192,0,0.2);
+    }
+
+    .offer-strip-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--amarelo);
+      margin-bottom: 14px;
+    }
+
+    .offer-tables {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .offer-table-block { }
+
+    .offer-table-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 12px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 6px 12px;
+      border-radius: 6px 6px 0 0;
+      margin-bottom: 0;
+    }
+
+    .offer-table-title.standard { background: var(--amarelo); color: #1A1A00; }
+    .offer-table-title.luxo     { background: var(--ouro); color: #1A1A00; }
+
+    .offer-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 12px;
+      border-radius: 0 0 8px 8px;
+      overflow: hidden;
+    }
+
+    .offer-table th {
+      background: rgba(255,255,255,0.1);
+      color: rgba(255,255,255,0.6);
+      padding: 6px 10px;
+      text-align: left;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 10px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+
+    .offer-table td {
+      padding: 6px 10px;
+      border-bottom: 1px solid rgba(255,255,255,0.06);
+      color: white;
+    }
+
+    .offer-table tr:last-child td { border-bottom: none; }
+    .offer-table tr:nth-child(even) td { background: rgba(255,255,255,0.04); }
+
+    .offer-table .price-col { font-family: 'Montserrat', sans-serif; font-weight: 800; color: var(--amarelo); }
+    .offer-table .luxo .price-col { color: var(--ouro); }
+    .offer-table .size-col { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px; color: white; }
+
+    .offer-note {
+      margin-top: 12px;
+      font-size: 11px;
+      color: rgba(255,255,255,0.45);
+      font-style: italic;
+    }
+
+    /* WHAT'S INCLUDED */
+    .includes-strip {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(245,192,0,0.15);
+      border-radius: 10px;
+      padding: 14px 18px;
+      margin-top: 16px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .includes-block-title {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 10px;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      color: var(--amarelo);
+      margin-bottom: 6px;
+    }
+
+    .includes-list {
+      list-style: none;
+      font-size: 11px;
+      color: rgba(255,255,255,0.7);
+      line-height: 1.7;
+    }
+
+    .includes-list li::before { content: "✓ "; color: #5BE85B; font-weight: 700; }
+
+    /* SCRIPT CARD */
+    .script-card {
+      background: white;
+      border-radius: 20px;
+      margin-bottom: 40px;
+      overflow: hidden;
+      box-shadow: 0 4px 24px rgba(0,59,122,0.08);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    .script-header {
+      padding: 26px 32px 22px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 16px;
+      border-bottom: 1px solid var(--cinza-borda);
+    }
+
+    .script-header.rodrigo { background: linear-gradient(135deg, #EEF4FF 0%, #F8FAFF 100%); }
+    .script-header.hellen  { background: linear-gradient(135deg, #F9EEF9 0%, #FDF8FE 100%); }
+    .script-header.dupla   { background: linear-gradient(135deg, #FFFBE6 0%, #FDFCF4 100%); }
+    .script-header.urgencia { background: linear-gradient(135deg, #F0FFF0 0%, #F8FFF8 100%); }
+
+    .script-num { font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 2px; color: var(--texto-suave); text-transform: uppercase; margin-bottom: 6px; }
+    .script-title { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; line-height: 1.2; color: var(--texto-escuro); }
+    .script-title span { display: block; font-size: 14px; font-weight: 500; color: var(--texto-medio); margin-top: 4px; }
+
+    .script-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+
+    .badge { display: inline-flex; align-items: center; gap: 5px; padding: 5px 12px; border-radius: 20px; font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap; }
+    .badge-rodrigo  { background: #DCEEFF; color: var(--rodrigo-cor); }
+    .badge-hellen   { background: #F3DEFF; color: var(--hellen-cor); }
+    .badge-dupla    { background: #FFF8CC; color: #7A5C00; }
+    .badge-urgencia { background: #E6FFE6; color: var(--verde); }
+    .badge-tempo    { background: var(--cinza-claro); color: var(--texto-medio); border: 1px solid var(--cinza-borda); }
+    .badge-deadline { background: #FFF3CC; color: #7A5000; border: 1px solid #FFE066; }
+    .badge-dia-d    { background: var(--verde); color: white; }
+
+    .urgency-tag {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--verde-medio);
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 5px 12px;
+      border-radius: 0 0 10px 10px;
+      margin-left: 32px;
+      margin-top: -1px;
+    }
+
+    /* BODY */
+    .script-body { padding: 32px; }
+    .scenes-list { margin-bottom: 28px; }
+
+    .scene-block { display: flex; gap: 16px; margin-bottom: 16px; padding-bottom: 16px; border-bottom: 1px dashed var(--cinza-borda); }
+    .scene-block:last-child { border-bottom: none; margin-bottom: 0; padding-bottom: 0; }
+
+    .scene-type { flex-shrink: 0; width: 120px; }
+    .scene-type-tag { display: inline-block; font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; padding: 4px 8px; border-radius: 6px; }
+    .tag-cena   { background: #E8F5E9; color: #2E7D32; }
+    .tag-fala   { background: #E3F2FD; color: #1565C0; }
+    .tag-texto  { background: #FFF8E1; color: #E65100; }
+    .tag-trilha { background: #F3E5F5; color: #6A1B9A; }
+
+    .scene-content { flex: 1; font-size: 14px; line-height: 1.65; color: var(--texto-escuro); }
+    .scene-content.fala { font-weight: 500; font-style: italic; color: #0A2240; }
+    .scene-content.texto-tela { font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 13px; color: #C65A00; background: #FFF8E1; padding: 8px 12px; border-radius: 8px; border-left: 3px solid #FFA726; }
+    .scene-content.texto-tela.verde { color: var(--verde); background: #E6FFE6; border-left-color: var(--verde-medio); }
+    .scene-content.texto-tela.vermelho { color: var(--vermelho); background: #FDECEA; border-left-color: #EF5350; }
+    .scene-content.texto-tela.amarelo { color: #7A5000; background: var(--amarelo-claro); border-left-color: var(--amarelo); }
+    .scene-content.trilha { color: #6A1B9A; font-size: 13px; }
+    .scene-content.cena-desc { color: var(--texto-medio); font-size: 13px; }
+
+    /* EXTRAS */
+    .extras-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; padding-top: 24px; border-top: 2px solid var(--cinza-borda); }
+    .extra-box { background: var(--cinza-claro); border-radius: 12px; padding: 18px 20px; }
+    .extra-box.full-width { grid-column: 1 / -1; }
+    .extra-box-label { font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--verde-medio); margin-bottom: 10px; display: flex; align-items: center; gap: 6px; }
+    .extra-box-content { font-size: 13px; color: var(--texto-escuro); line-height: 1.6; white-space: pre-line; }
+    .hook-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 15px; color: var(--verde); line-height: 1.3; }
+    .direction-note { color: var(--texto-medio); font-style: italic; font-size: 13px; }
+
+    /* PAGE FOOTER */
+    .page-footer { background: #001A00; color: rgba(255,255,255,0.5); text-align: center; padding: 28px 40px; font-size: 12px; }
+    .page-footer strong { color: var(--amarelo); }
+
+    @media (max-width: 700px) {
+      .header-inner { padding: 32px 20px; }
+      .header h1 { font-size: 26px; }
+      .scripts-wrapper, .legend { padding: 0 16px; }
+      .script-header { flex-direction: column; }
+      .script-badges { flex-direction: row; flex-wrap: wrap; align-items: flex-start; }
+      .script-body { padding: 20px 16px; }
+      .extras-grid, .offer-tables, .includes-strip { grid-template-columns: 1fr; }
+      .scene-type { width: 90px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ALERT BANNER -->
+<div class="alert-banner">
+  🟢 ÚLTIMOS DIAS — Promoção <span>Seleção Splash</span> encerra em <span>29 de junho</span> — Linha Bonaire com até 30% OFF
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">Splash Campinas — Semana Final | Seleção Splash</div>
+    <h1>Roteiros de <span class="destaque">Urgência</span><br><span class="marca">Promoção Seleção Splash</span></h1>
+    <p class="header-sub">6 roteiros para os últimos dias — 23 a 29/06. Linha Bonaire com até 30% OFF. Rodrigo, Hellen e Dupla com ângulos específicos para encerrar a promoção forte.</p>
+    <div class="countdown-strip">
+      <div class="countdown-box">
+        <div class="countdown-num">6</div>
+        <div class="countdown-label">Dias</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num">até</div>
+        <div class="countdown-label">&nbsp;</div>
+      </div>
+      <div class="countdown-box">
+        <div class="countdown-num">29/06</div>
+        <div class="countdown-label">Encerramento</div>
+      </div>
+      <div class="countdown-deadline">Depois disso, os 30% de desconto acabam.</div>
+    </div>
+    <div class="header-meta" style="margin-top:18px;">
+      <div class="header-meta-item"><span class="dot"></span> Linha Bonaire iGUi</div>
+      <div class="header-meta-item"><span class="dot"></span> Medidas: 3, 4, 5, 6, 7 e 8 metros</div>
+      <div class="header-meta-item"><span class="dot"></span> Standard + Luxo</div>
+      <div class="header-meta-item"><span class="dot"></span> Pronta entrega Campinas</div>
+    </div>
+  </div>
+</div>
+
+<!-- LEGEND -->
+<div class="legend">
+  <div class="legend-card rodrigo">
+    <div class="legend-name rodrigo">Rodrigo</div>
+    <div class="legend-desc">Urgência racional — prazo, desconto de 30%, estoque e processo claro para o homem decidido.</div>
+  </div>
+  <div class="legend-card hellen">
+    <div class="legend-name hellen">Hellen</div>
+    <div class="legend-desc">Urgência emocional — última chance da Linha Bonaire com porcelana, pedra natural e Wi-Fi.</div>
+  </div>
+  <div class="legend-card dupla">
+    <div class="legend-name dupla">Rodrigo + Hellen</div>
+    <div class="legend-desc">Chamada final em dupla — encerra a Seleção Splash com energia máxima.</div>
+  </div>
+</div>
+
+<!-- SCRIPTS WRAPPER -->
+<div class="scripts-wrapper" style="margin-top:40px;">
+
+  <!-- OFFER TABLE -->
+  <div class="offer-strip">
+    <div class="offer-strip-title">🟢 Tabela Seleção Splash — Linha Bonaire | Válido até 29/06</div>
+    <div class="offer-tables">
+      <div class="offer-table-block">
+        <div class="offer-table-title standard">Standard</div>
+        <table class="offer-table">
+          <thead>
+            <tr>
+              <th>Medida</th>
+              <th>De</th>
+              <th>Por</th>
+              <th>Entrada</th>
+              <th>+15x</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="size-col">03m</td><td><s style="color:#888">R$15.048</s></td><td class="price-col">R$10.398</td><td>R$1.398</td><td>R$825</td></tr>
+            <tr><td class="size-col">04m</td><td><s style="color:#888">R$17.701</s></td><td class="price-col">R$12.390</td><td>R$2.390</td><td>R$915</td></tr>
+            <tr><td class="size-col">05m</td><td><s style="color:#888">R$22.690</s></td><td class="price-col">R$16.179</td><td>R$3.179</td><td>R$1.189</td></tr>
+            <tr><td class="size-col">06m</td><td><s style="color:#888">R$26.939</s></td><td class="price-col">R$19.421</td><td>R$4.421</td><td>R$1.375</td></tr>
+            <tr><td class="size-col">07m</td><td><s style="color:#888">R$34.976</s></td><td class="price-col">R$25.540</td><td>R$6.540</td><td>R$1.739</td></tr>
+            <tr><td class="size-col">08m</td><td><s style="color:#888">R$41.161</s></td><td class="price-col">R$30.298</td><td>R$8.451</td><td>R$1.999</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="offer-table-block">
+        <div class="offer-table-title luxo">Luxo</div>
+        <table class="offer-table luxo">
+          <thead>
+            <tr>
+              <th>Medida</th>
+              <th>De</th>
+              <th>Por</th>
+              <th>Entrada</th>
+              <th>+15x</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td class="size-col">03m</td><td><s style="color:#888">R$30.013</s></td><td class="price-col">R$19.979</td><td>R$4.979</td><td>R$1.375</td></tr>
+            <tr><td class="size-col">04m</td><td><s style="color:#888">R$33.798</s></td><td class="price-col">R$22.350</td><td>R$5.350</td><td>R$1.555</td></tr>
+            <tr><td class="size-col">05m</td><td><s style="color:#888">R$41.896</s></td><td class="price-col">R$29.712</td><td>R$7.712</td><td>R$2.015</td></tr>
+            <tr><td class="size-col">06m</td><td><s style="color:#888">R$49.203</s></td><td class="price-col">R$35.426</td><td>R$11.758</td><td>R$2.166</td></tr>
+            <tr><td class="size-col">07m</td><td><s style="color:#888">R$60.075</s></td><td class="price-col">R$42.758</td><td>R$12.900</td><td>R$2.735</td></tr>
+            <tr><td class="size-col">08m</td><td><s style="color:#888">R$72.113</s></td><td class="price-col">R$51.420</td><td>R$14.900</td><td>R$3.342</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <div class="includes-strip">
+      <div>
+        <div class="includes-block-title">Standard inclui</div>
+        <ul class="includes-list">
+          <li>Cascata e LED (à escolha)</li>
+          <li>Hidromassagem</li>
+          <li>Kit aspiração + filtragem completo</li>
+          <li>Toda parte hidráulica (tubos, registros, skimmer, casa de máquinas)</li>
+          <li>Mão de obra + frete (condições normais)</li>
+        </ul>
+      </div>
+      <div>
+        <div class="includes-block-title">Luxo inclui tudo do Standard +</div>
+        <ul class="includes-list">
+          <li>19 opções de porcelana Atlas</li>
+          <li>Borda em pedra natural</li>
+          <li>Clorador automático</li>
+          <li>Quadro de Comando Digital</li>
+          <li>Aquecimento Thermas Kelvin Inverter Wi-Fi</li>
+        </ul>
+      </div>
+    </div>
+    <div class="offer-note">Crédito sujeito à aprovação. Frete e instalação podem variar conforme condições locais. Preço base São Paulo. Medidas aproximadas.</div>
+  </div>
+
+  <div class="section-label" style="margin-top:36px;">Os 6 Roteiros — Promoção Seleção Splash | Semana Final 23–29/06</div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 1 — RODRIGO | ABRE A SEMANA -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar: 23/06 (Segunda)</div>
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 01</div>
+        <div class="script-title">
+          "Seis dias. A Seleção Splash encerra."
+          <span>Rodrigo abre a semana com o prazo, o desconto e o processo sem mistério</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-deadline">🗓️ Encerra 29/06</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo direto para a câmera. Pode mostrar os 6 dedos. Fundo: loja ou piscina Bonaire instalada. Energia de quem vai te dar uma informação importante.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Seis dias. É o que sobrou da Promoção Seleção Splash aqui na Splash Campinas. Dia 29 de junho, acaba."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 ÚLTIMOS 6 DIAS — Seleção Splash encerra 29/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A gente tá com até 30% de desconto na Linha Bonaire iGUi. Essa é a piscina mais completa do mercado — cascata, hidromassagem, kit aspiração, filtragem, parte hidráulica toda incluída. Completa e instalada."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela amarelo">✅ ATÉ 30% OFF — Linha Bonaire iGUi | Completa e instalada</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Tem medida pra todo espaço: 3, 4, 5, 6, 7 e 8 metros. A de 6 metros sai por R$ 19.421 na versão Standard — ou entrada de R$ 4.421 e 15 parcelas de R$ 1.375."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 6m Standard: R$19.421 &nbsp;|&nbsp; ou R$4.421 + 15x R$1.375</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Pronta entrega aqui em Campinas. Você me chama, a gente resolve essa semana. Splash Campinas, a pioneira."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 CHAME AGORA — Link na bio | Encerra 29/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Beat direto e confiante — urgência sem ansiedade. Pode ter um leve tom patriótico/esportivo que remete ao nome "Seleção". Volume sobe no CTA.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Aviso: faltam 6 dias. 🔴
+
+A Promoção Seleção Splash da Splash Campinas encerra no dia 29 de junho. Depois disso, o desconto de 30% na Linha Bonaire não existe mais.
+
+✅ Até 30% OFF — Linha Bonaire iGUi
+✅ Medidas: 3, 4, 5, 6, 7 e 8 metros
+✅ Cascata, hidromassagem, filtragem, parte hidráulica completa — tudo incluso
+✅ 6m Standard: R$19.421 (ou entrada + 15x R$1.375)
+✅ Pronta entrega em Campinas
+
+Se você tá pesquisando há semanas, essa é a semana de decidir.
+
+📲 Link na bio — chame no WhatsApp.
+
+#SplashCampinas #SeleçãoSplash #LinhaBonaireIGUi #UltimosDias #EncerraEm29 #PiscinaComDesconto</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Faltam 6 dias. 30% OFF na Linha Bonaire. Depois acabou."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo começa mostrando 6 dedos — gesto forte e imediato. Tom firme nos primeiros 20 segundos, alivia quando chega no preço e no CTA. Sem exagero dramático — clareza é o diferencial.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 2 — HELLEN | ÚLTIMA CHANCE DA LINHA LUXO -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar: 24/06 (Terça)</div>
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 02</div>
+        <div class="script-title">
+          "Essa piscina tem pedra natural, porcelana e Wi-Fi. E está acabando."
+          <span>Hellen — última chance da versão Luxo da Linha Bonaire</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 29/06</span>
+        <span class="badge badge-tempo">⏱ ~55 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen num ambiente bonito, próximo a referência visual da Linha Bonaire ou área externa elegante. Tom de quem divide algo que sabe que a pessoa vai querer — urgência com carinho.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Eu quero te mostrar o que a versão Luxo da nossa Linha Bonaire tem — e te falar que essa semana é a última chance de você pegar com 30% de desconto."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 ÚLTIMA SEMANA — Luxo Linha Bonaire com 30% OFF até 29/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A versão Luxo da Bonaire tem borda em pedra natural — aquele acabamento que faz a piscina parecer de resort. Mais 19 opções de porcelana Atlas, cascata, hidromassagem, clorador automático, quadro de comando digital e aquecimento Thermas Kelvin com controle pelo Wi-Fi."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Borda em Pedra Natural · 19 Porcelanas Atlas · Clorador · QC Digital · Thermas Kelvin Wi-Fi</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A de 6 metros na versão Luxo sai por R$ 35.426 — de R$ 49.203. Isso é mais de R$ 13 mil de economia que só existe essa semana."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela amarelo">💛 6m Luxo: de R$49.203 → R$35.426 | Economia de R$13.777</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Dia 29 de junho essa promoção encerra. Me chama antes disso. Você não vai se arrepender."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Me chama antes do dia 29 — Link na bio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música elegante com leve tensão — começa suave e ganha peso quando Hellen cita o valor da economia. Trilha de luxo com urgência contida.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Borda em pedra natural. 19 opções de porcelana. Aquecimento Wi-Fi. Isso é a Linha Bonaire Luxo. 🏊✨
+
+E está com 30% OFF na Promoção Seleção Splash — que encerra no dia 29 de junho.
+
+6m Luxo: de R$49.203 por R$35.426 (+ de R$13 mil de economia)
+Ou entrada + 15x R$2.166
+
+Disponível em 3, 4, 5, 6, 7 e 8 metros.
+
+Completa, instalada e pronta entrega aqui em Campinas.
+
+Me chama antes do dia 29. 👇
+
+#SplashCampinas #SeleçãoSplash #LinhaBonaireIGUi #PiscinaLuxo #UltimaChance #EncerraEm29</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Pedra natural, porcelana Atlas e Wi-Fi — com 30% OFF. Só até domingo."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Hellen fala devagar nos primeiros 10 segundos — quase íntima. Na hora de citar "pedra natural" e "porcelana" ela abre um sorriso genuíno — precisa soar como ela realmente gosta do produto. O valor da economia ("13 mil") deve ter uma pausa depois — deixa o número assentar.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 3 — RODRIGO | A TABELA COMPLETA — DE 3 A 8 METROS -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar: 25/06 (Quarta)</div>
+    <div class="script-header rodrigo">
+      <div>
+        <div class="script-num">Roteiro 03</div>
+        <div class="script-title">
+          "Tem medida pra todo quintal. E até 30% OFF."
+          <span>Rodrigo mostra a amplitude da tabela — de 3 a 8 metros — como argumento de decisão</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-rodrigo">Rodrigo</span>
+        <span class="badge badge-deadline">🗓️ Encerra 29/06</span>
+        <span class="badge badge-tempo">⏱ ~55 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo com um tablet ou folha mostrando a tabela — ou gesticulando as medidas. Tom de consultor que está resolvendo o problema de quem "não sabe se cabe". Pode caminhar levemente enquanto fala.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Qual o tamanho do seu quintal? Porque na Promoção Seleção Splash a gente tem medida para todo espaço — e tudo com até 30% de desconto até o dia 29 de junho."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela amarelo">📐 3, 4, 5, 6, 7 e 8 metros — Linha Bonaire | Até 30% OFF</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Quintal menor: a de 3 metros sai por R$ 10.398 na Standard. A de 4 metros por R$ 12.390. Já é uma piscina Bonaire completa — cascata, hidromassagem, parte hidráulica toda incluída."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏠 3m → R$10.398 &nbsp;|&nbsp; 4m → R$12.390 &nbsp;|&nbsp; 5m → R$16.179</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Quintal grande: 6 metros por R$ 19.421, 7 metros por R$ 25.540 e 8 metros por R$ 30.298. Todas completas, instaladas e pronta entrega aqui em Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">🏊 6m → R$19.421 &nbsp;|&nbsp; 7m → R$25.540 &nbsp;|&nbsp; 8m → R$30.298</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Não existe desculpa de 'meu quintal é pequeno'. Tem medida pra você. Me manda foto do espaço no WhatsApp — eu te digo qual encaixa."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Manda a foto — te indico a medida certa | Encerra 29/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música leve e direta — ritmo de consultor confiante. Pode acelerar levemente quando Rodrigo lista as medidas grandes. Tom positivo e resolutivo.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Seu quintal tem medida na Seleção Splash. 📐
+
+A Linha Bonaire iGUi está com até 30% OFF até o dia 29 de junho — e tem 6 tamanhos diferentes:
+
+3m → R$10.398 Standard
+4m → R$12.390 Standard
+5m → R$16.179 Standard
+6m → R$19.421 Standard
+7m → R$25.540 Standard
+8m → R$30.298 Standard
+
+Todas completas, instaladas e pronta entrega em Campinas.
+Cascata, hidromassagem, filtragem, parte hidráulica — tudo incluso.
+
+Não sabe qual medida cabe? Manda foto do quintal no direct — te oriento na hora.
+
+#SplashCampinas #SeleçãoSplash #LinhaBonaireIGUi #QualTamanho #EncerraEm29 #PiscinaParaTodoCasas</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"De 3 a 8 metros. Tem medida pro seu quintal — e 30% OFF."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Rodrigo pode usar os dedos para contar as medidas ou segurar um tablet com a tabela visível. Para as medidas menores — tom mais acolhedor ("sem desculpa de quintal pequeno"). Para as maiores — postura mais imponente. O CTA "manda a foto" deve soar como oferta genuína de ajuda.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 4 — HELLEN | O VERÃO VAI CHEGAR -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar: 26/06 (Quinta)</div>
+    <div class="script-header hellen">
+      <div>
+        <div class="script-num">Roteiro 04</div>
+        <div class="script-title">
+          "Você vai chegar no verão sem piscina de novo?"
+          <span>Hellen ativa o FOMO do próximo verão — dor de adiar e se arrepender</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-hellen">Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 29/06</span>
+        <span class="badge badge-tempo">⏱ ~50 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Hellen com expressão de cumplicidade — começa com olhar para cima, pensativa, depois volta para a câmera. Tom narrativo que vai crescendo em urgência.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Dezembro chega. O calor bate. Seus filhos pedem piscina, seus amigos marcam churrasco... e você vai lembrar que em junho tinha uma promoção. Que a piscina Bonaire estava com 30% OFF, pronta entrega, completa. E você deixou passar."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">😔 "Eu devia ter fechado em junho..." — Não deixa isso acontecer.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"A Promoção Seleção Splash encerra no dia 29 de junho. Piscina iGUi Linha Bonaire, completa e instalada — Standard a partir de R$ 10.398 pra quem tem quintal menor, ou versão Luxo com pedra natural, porcelana e Wi-Fi a partir de R$ 19.979."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✅ Standard: a partir de R$10.398 &nbsp;|&nbsp; ✨ Luxo: a partir de R$19.979</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Essa semana você garante o verão com a piscina que você sempre quis. Me chama."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Garanta o verão agora — encerra 29/06 | Link na bio</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Começa melancólico (evocando o arrependimento futuro) e vira positivo e animado quando Hellen apresenta os preços. Contraste emocional intencional — o "salvo" sonoro é o preço.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Dezembro chega. O calor bate. Você vai lembrar dessa promoção? 🌞
+
+A Promoção Seleção Splash — Linha Bonaire iGUi — encerra no dia 29 de junho.
+
+Não passa outro verão sem a sua piscina.
+
+🏊 Standard a partir de R$10.398 (3m) até R$30.298 (8m)
+✨ Luxo a partir de R$19.979 — pedra natural, porcelana, Wi-Fi
+
+Completa, instalada e pronta entrega em Campinas.
+
+Você tem até domingo. Me chama agora. 👇
+
+#SplashCampinas #SeleçãoSplash #VerãoComPiscina #UltimaChance #EncerraEm29 #LinhaBonaireIGUi</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Você vai chegar no verão sem piscina de novo?"</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Hellen começa com olhar para cima ou levemente distante — como quem está visualizando aquela cena de dezembro. A pausa após "e você deixou passar" precisa de 2 segundos reais. A virada para os preços deve ser suave e esperançosa — não agressiva.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 5 — DUPLA | CHAMADA FINAL -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar: 27/06 (Sexta)</div>
+    <div class="script-header dupla">
+      <div>
+        <div class="script-num">Roteiro 05</div>
+        <div class="script-title">
+          "Semana final da Seleção Splash. Decisão agora."
+          <span>Rodrigo e Hellen fecham juntos com energia máxima</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-dupla">Rodrigo + Hellen</span>
+        <span class="badge badge-deadline">🗓️ Encerra 29/06</span>
+        <span class="badge badge-tempo">⏱ ~60 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Rodrigo e Hellen juntos em quadro ou em cortes alternados rápidos. Tom de equipe que está alinhada — urgência coletiva, não pressão individual.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Essa é a semana final da Promoção Seleção Splash — Linha Bonaire iGUi com até 30% OFF."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "No dia 29 de junho essa promoção encerra. Sem prorrogação. Sem esse desconto depois."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 SEMANA FINAL — Encerra 29/06. Sem prorrogação.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Pra quem quer praticidade e preço: Standard a partir de R$ 10.398. De 3 a 8 metros, completa e instalada. Entrada a partir de R$ 1.398 e parcelas a partir de R$ 825 por mês."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">💰 Standard: a partir de R$10.398 | Entrada a partir de R$1.398 + 15x R$825</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Pra quem quer o melhor: versão Luxo com borda em pedra natural, 19 opções de porcelana Atlas, clorador, quadro digital e aquecimento Wi-Fi. A partir de R$ 19.979."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela">✨ Luxo: a partir de R$19.979 — Pedra Natural · Porcelana · Wi-Fi</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[RODRIGO] "Você tem essa semana."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[HELLEN] "Usa ela. Chama a gente."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">[OS DOIS] "Splash Campinas — a pioneira."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 Splash Campinas — A Pioneira | Link na Bio | Encerra 29/06</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Música com energia alta e crescente — beat motivacional com leve referência ao tema patriótico/esportivo da Seleção Splash. Pico de volume nos últimos 10 segundos.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post</div>
+          <div class="extra-box-content">Semana final. A Seleção Splash encerra domingo. 🔴
+
+A Promoção Seleção Splash — Linha Bonaire iGUi — encerra no dia 29 de junho. Sem prorrogação.
+
+💼 Standard: a partir de R$10.398 (completa e instalada)
+💎 Luxo: a partir de R$19.979 (pedra natural, porcelana, Wi-Fi)
+
+📐 Medidas: 3, 4, 5, 6, 7 e 8 metros
+🚚 Pronta entrega em Campinas
+
+Você tem até domingo. Clica no link da bio agora. 👇
+
+*Crédito sujeito à aprovação. Frete e instalação podem variar.*
+
+#SplashCampinas #SeleçãoSplash #SemanaFinal #EncerraEm29 #LinhaBonaireIGUi #PiscinaCompleta</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"Semana final da Seleção Splash. Sem prorrogação."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Os dois no quadro ao mesmo tempo para o "Splash Campinas — a pioneira" final — timing sincronizado, ensaiar esse momento. Cortes alternados rápidos nas falas individuais. Energia máxima mas sem gritar — presença, não volume.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ============================================================ -->
+  <!-- ROTEIRO 6 — DIA D | 29/06 MANHÃ -->
+  <!-- ============================================================ -->
+  <div class="script-card">
+    <div class="urgency-tag">🟢 Gravar e publicar: 29/06 — 7h da manhã</div>
+    <div class="script-header urgencia">
+      <div>
+        <div class="script-num">Roteiro 06</div>
+        <div class="script-title">
+          "Hoje. Último dia. Não tem amanhã."
+          <span>Rodrigo no Dia D — breve, definitivo, gravado no celular de manhã</span>
+        </div>
+      </div>
+      <div class="script-badges">
+        <span class="badge badge-dia-d">DIA D</span>
+        <span class="badge badge-deadline">📅 Publicar 29/06 — 7h</span>
+        <span class="badge badge-tempo">⏱ ~35 seg</span>
+      </div>
+    </div>
+    <div class="script-body">
+      <div class="scenes-list">
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-cena">Cena</span></div>
+          <div class="scene-content cena-desc">Pode ser gravado no celular, de manhã, em qualquer lugar real — loja, carro, piscina. Sem glamour proposital. A espontaneidade comunica urgência real. Rodrigo ou Hellen — quem estiver disponível mais cedo.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Hoje. Hoje é o último dia da Promoção Seleção Splash."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">🔴 HOJE — 29/06 — ÚLTIMO DIA DA SELEÇÃO SPLASH</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Linha Bonaire iGUi com até 30% OFF acaba hoje. Se você ficou essa semana pensando — esse é o momento. Não tem amanhã nesse preço."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">❌ Amanhã, esse desconto não existe mais.</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-fala">Fala</span></div>
+          <div class="scene-content fala">"Standard a partir de R$ 10.398, Luxo a partir de R$ 19.979. De 3 a 8 metros, completa, instalada, pronta entrega. Me chama agora. Splash Campinas."</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-texto">Tela</span></div>
+          <div class="scene-content texto-tela vermelho">📲 ME CHAMA AGORA — Link na bio | HOJE é o último dia</div>
+        </div>
+
+        <div class="scene-block">
+          <div class="scene-type"><span class="scene-type-tag tag-trilha">Trilha</span></div>
+          <div class="scene-content trilha">Pode ser sem música — só voz. Ou batida seca e urgente. A brevidade e a espontaneidade são a mensagem. Esse é o Reel mais curto de todos.</div>
+        </div>
+
+      </div>
+
+      <div class="extras-grid">
+        <div class="extra-box full-width">
+          <div class="extra-box-label"><span>📝</span> Legenda do Post — publicar 29/06 às 7h</div>
+          <div class="extra-box-content">🔴 HOJE É O ÚLTIMO DIA.
+
+A Promoção Seleção Splash — Linha Bonaire iGUi — encerra hoje, 29 de junho. Amanhã, os 30% de desconto não existem mais.
+
+✅ Standard: 3m R$10.398 | 4m R$12.390 | 5m R$16.179 | 6m R$19.421 | 7m R$25.540 | 8m R$30.298
+✨ Luxo: a partir de R$19.979 (pedra natural, porcelana, Wi-Fi)
+
+Pronta entrega. Instalação especializada. Produto iGUi.
+
+Você tem o dia de hoje. Me chama agora.
+
+📲 Link na bio — WhatsApp direto.
+
+*Crédito sujeito à aprovação.*
+
+#SplashCampinas #HojeÉOÚltimoDia #SeleçãoSplash #EncerraHoje #LinhaBonaireIGUi #30OFF</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🖼️</span> Hook de Capa</div>
+          <div class="hook-text">"HOJE — 29/06 — ÚLTIMO DIA da Seleção Splash."</div>
+        </div>
+        <div class="extra-box">
+          <div class="extra-box-label"><span>🎬</span> Direção de Câmera</div>
+          <div class="direction-note">Gravar no celular, cedo, sem produção. Pode ser no caminho pra loja. A autenticidade do "estou gravando isso às 7h porque hoje é o último dia" é o diferencial absoluto. Sem filtro, sem anel de luz — realidade vende urgência real.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div class="page-footer">
+  <strong>Splash Campinas by iGUi — A Pioneira</strong> — Promoção Seleção Splash | Linha Bonaire | Encerra 29/06/2026<br>
+  Material de uso interno para produção de conteúdo. Crédito sujeito à aprovação. Frete e instalação podem variar conforme condições locais. Preço base São Paulo. Medidas aproximadas.
+</div>
+
+</body>
+</html>
