@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8"/>
+<title>Story 3/3 — Seq 06 — Por que o inverno é a hora certa?</title>
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Open+Sans:wght@400;600&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;}
+html{background:#000;}
+body{
+  width:1080px;height:1920px;
+  overflow:hidden;
+  transform-origin:top left;
+  margin:0 auto;
+}
+.story{
+  width:1080px;height:1920px;
+  position:relative;
+  background:linear-gradient(180deg,#000E1F 0%,#001A3A 40%,#003B7A 75%,#005BAA 100%);
+  font-family:'Montserrat',sans-serif;
+  overflow:hidden;
+}
+/* Decorative elements */
+.deco-circle{
+  position:absolute;border-radius:50%;
+  background:radial-gradient(circle,rgba(0,174,239,0.15) 0%,transparent 70%);
+}
+.deco-flake{
+  position:absolute;color:rgba(0,174,239,0.12);
+  font-size:220px;font-weight:900;line-height:1;
+  user-select:none;pointer-events:none;
+}
+.deco-line{
+  position:absolute;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,transparent,rgba(0,174,239,0.3),rgba(245,192,0,0.5),rgba(0,174,239,0.3),transparent);
+}
+
+/* HEADER */
+.s-header{
+  position:absolute;top:0;left:0;right:0;
+  padding:60px 64px 0;
+  z-index:10;
+}
+.s-brand-row{
+  display:flex;align-items:center;justify-content:space-between;
+  margin-bottom:20px;
+}
+.s-brand{
+  font-size:26px;font-weight:900;color:white;letter-spacing:1px;
+}
+.s-brand span{color:#00AEEF;}
+.s-promo-tag{
+  background:#00AEEF;color:#001A3A;
+  font-size:22px;font-weight:900;
+  padding:10px 24px;border-radius:40px;
+  letter-spacing:0.5px;
+}
+.s-seq-info{
+  font-size:24px;font-weight:700;color:rgba(255,255,255,0.5);
+  letter-spacing:1.5px;text-transform:uppercase;
+}
+
+/* MAIN BODY */
+.s-body{
+  position:absolute;
+  top:220px;left:64px;right:64px;
+  display:flex;flex-direction:column;
+  gap:0;
+}
+.s-eyebrow{
+  font-size:28px;font-weight:700;color:#00AEEF;
+  letter-spacing:2px;text-transform:uppercase;
+  margin-bottom:30px;
+}
+.s-title{
+  font-size:120px;font-weight:900;color:white;
+  line-height:1.0;margin-bottom:30px;
+}
+.s-title.lg{font-size:96px;}
+.s-title.md{font-size:78px;}
+.s-title.sm{font-size:64px;}
+.s-title .hi{color:#F5C000;}
+.s-title .ice{color:#00AEEF;}
+.s-subtitle{
+  font-size:46px;font-weight:700;color:#F5C000;
+  line-height:1.2;margin-bottom:30px;
+}
+.s-body-text{
+  font-size:38px;font-weight:600;color:rgba(255,255,255,0.85);
+  line-height:1.5;font-family:'Open Sans',sans-serif;
+  margin-bottom:30px;
+}
+.s-body-text b{color:white;}
+.s-price-badge{
+  display:inline-block;
+  background:#F5C000;color:#001A3A;
+  font-size:88px;font-weight:900;
+  padding:24px 48px;border-radius:20px;
+  margin-bottom:20px;line-height:1;
+}
+.s-price-detail{
+  font-size:34px;font-weight:600;color:rgba(255,255,255,0.65);
+  margin-bottom:24px;
+}
+.s-price-from{
+  font-size:34px;font-weight:700;color:rgba(255,255,255,0.7);
+  margin-bottom:8px;
+}
+.s-price-crossed{
+  font-size:34px;color:rgba(255,255,255,0.4);
+  text-decoration:line-through;margin-bottom:6px;
+}
+.s-price-by{
+  font-size:64px;font-weight:900;color:#F5C000;
+  margin-bottom:8px;
+}
+.s-price-by-detail{font-size:32px;color:rgba(255,255,255,0.6);}
+
+/* INCLUSION LIST */
+.s-list{list-style:none;margin-bottom:30px;}
+.s-list li{
+  font-size:42px;font-weight:700;color:white;
+  line-height:1;padding:18px 0;
+  border-bottom:1px solid rgba(255,255,255,0.08);
+  display:flex;align-items:center;gap:20px;
+}
+.s-list li .check{color:#00AEEF;font-size:38px;}
+.s-list li .item-name{flex:1;}
+.s-list li .item-price{color:#F5C000;font-size:38px;text-align:right;}
+.s-list li .item-small{font-size:26px;color:rgba(255,255,255,0.5);display:block;}
+
+/* REASON LIST */
+.s-reasons{list-style:none;margin-bottom:30px;}
+.s-reasons li{
+  font-size:44px;font-weight:700;color:white;
+  padding:22px 0;border-bottom:1px solid rgba(255,255,255,0.08);
+  display:flex;align-items:center;gap:24px;
+}
+.s-reasons li .r-label{color:#F5C000;}
+
+/* STICKER NOTE */
+.s-sticker{
+  display:inline-block;
+  background:rgba(0,174,239,0.15);
+  border:2px solid rgba(0,174,239,0.4);
+  color:#00AEEF;
+  font-size:30px;font-weight:700;
+  padding:16px 32px;border-radius:40px;
+  margin-top:20px;
+}
+
+/* BIG CTA BUTTON */
+.s-cta-btn{
+  display:inline-flex;align-items:center;gap:20px;
+  background:white;color:#001A3A;
+  font-size:40px;font-weight:900;
+  padding:28px 56px;border-radius:20px;
+  margin-top:24px;
+}
+
+/* FOOTER */
+.s-footer{
+  position:absolute;bottom:0;left:0;right:0;
+  background:rgba(0,5,15,0.85);
+  border-top:5px solid #F5C000;
+  padding:44px 64px;
+}
+.s-footer-cta{
+  font-size:42px;font-weight:900;color:white;
+  margin-bottom:12px;
+}
+.s-footer-sub{
+  font-size:30px;font-weight:600;color:rgba(255,255,255,0.65);
+}
+.s-footer-legal{
+  font-size:22px;color:rgba(255,255,255,0.35);margin-top:10px;
+}
+
+/* DIVIDER */
+.s-divider{
+  height:4px;width:100%;
+  background:linear-gradient(90deg,transparent,#00AEEF,#F5C000,#00AEEF,transparent);
+  margin:32px 0;
+}
+
+/* Tag/pill */
+.pill{
+  display:inline-block;
+  padding:12px 28px;border-radius:40px;
+  font-size:30px;font-weight:800;
+}
+.pill-ice{background:rgba(0,174,239,0.2);color:#00AEEF;border:2px solid rgba(0,174,239,0.4);}
+.pill-gold{background:rgba(245,192,0,0.15);color:#F5C000;border:2px solid rgba(245,192,0,0.4);}
+.pill-white{background:rgba(255,255,255,0.12);color:white;border:2px solid rgba(255,255,255,0.2);}
+
+/* SECTION HEADER */
+.s-section-hdr{
+  background:linear-gradient(135deg,#00AEEF,#005BAA);
+  padding:20px 36px;border-radius:14px;
+  font-size:40px;font-weight:900;color:white;
+  margin-bottom:24px;display:flex;align-items:center;gap:16px;
+}
+
+/* Big number */
+.s-big-num{
+  font-size:240px;font-weight:900;
+  line-height:0.85;color:#F5C000;
+  opacity:0.15;
+  position:absolute;right:40px;top:180px;
+  letter-spacing:-10px;
+  pointer-events:none;user-select:none;
+}
+</style>
+<script>
+function scaleToViewport(){
+  var scale=Math.min(window.innerWidth/1080,window.innerHeight/1920);
+  var ml=Math.max(0,(window.innerWidth-1080*scale)/2);
+  var mt=Math.max(0,(window.innerHeight-1920*scale)/2);
+  document.body.style.transform='scale('+scale+')';
+  document.body.style.marginLeft=ml+'px';
+  document.body.style.marginTop=mt+'px';
+}
+window.addEventListener('load',scaleToViewport);
+window.addEventListener('resize',scaleToViewport);
+</script>
+</head>
+<body>
+<div class="story">
+
+  <!-- Decorative flakes -->
+  <div class="deco-flake" style="top:-40px;left:-60px;">❄</div>
+  <div class="deco-flake" style="bottom:-60px;right:-50px;font-size:280px;">❄</div>
+  <div class="deco-circle" style="width:800px;height:800px;top:-200px;right:-200px;"></div>
+  <div class="deco-circle" style="width:600px;height:600px;bottom:-100px;left:-150px;"></div>
+  <div class="deco-line" style="top:155px;"></div>
+
+  <!-- HEADER -->
+  <div class="s-header">
+    <div class="s-brand-row">
+      <div class="s-brand">SPLASH <span>CAMPINAS</span><br><span style="font-size:21px;color:rgba(255,255,255,0.5);">— A PIONEIRA —</span></div>
+      <div class="s-promo-tag">❄️ LIQUIDAÇÃO DE INVERNO</div>
+    </div>
+    <div class="s-seq-info">SEQ. 06/7 &nbsp;·&nbsp; STORY 3/3</div>
+  </div>
+
+  <!-- BIG BG NUMBER -->
+  <div class="s-big-num">3</div>
+
+  <!-- BODY -->
+  <div class="s-body">
+    <div class="s-eyebrow">☀️ PENSE ASSIM</div>
+    <div class="s-title md" style="margin-top:24px;">Dezembro<br>chega.<br>Você vai<br>estar pronto?</div>
+    <div class="s-divider"></div>
+    <div class="s-body-text">
+      A Liquidação de Inverno da Splash Campinas é por <b>tempo limitado</b>.<br><br>
+      Não deixa o verão chegar sem a sua piscina. 📲
+    </div>
+    <div class="s-sticker">⏳ Sticker: Contagem regressiva 29/06</div>
+    <div class="s-cta-btn"><span>📲</span><span>LINK NA BIO</span></div>
+  </div>
+
+  <!-- FOOTER -->
+  <div class="s-footer">
+    <div class="s-footer-cta">📲 WhatsApp · @splashcampinas · Link na bio</div>
+    <div class="s-footer-sub">Liquidação de Inverno · Splash Campinas</div>
+    <div class="s-footer-legal">+25% OFF · Crédito sujeito a aprovação · Preço base SP · Medidas aproximadas</div>
+  </div>
+
+</div>
+</body>
+</html>
