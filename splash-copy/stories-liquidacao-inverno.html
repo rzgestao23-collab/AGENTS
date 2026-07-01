@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>7 Sequências de Stories — Liquidação de Inverno | Splash Campinas</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&family=Open+Sans:wght@300;400;600&display=swap');
+
+    :root {
+      --azul-gelo:   #00AEEF;
+      --azul-splash: #003B7A;
+      --azul-medio:  #005BAA;
+      --amarelo:     #F5C000;
+      --laranja:     #FF8C00;
+      --branco:      #FFFFFF;
+      --cinza-claro: #F0F6FF;
+      --cinza-borda: #D0DCF0;
+      --texto-escuro:#0A1628;
+      --texto-medio: #3A4A6B;
+      --texto-suave: #7A8EAA;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      font-family: 'Open Sans', sans-serif;
+      background: var(--cinza-claro);
+      color: var(--texto-escuro);
+      line-height: 1.6;
+    }
+
+    /* ── HEADER ── */
+    .header {
+      background: linear-gradient(135deg, #001A3A 0%, #003B7A 50%, #005BAA 100%);
+      color: white;
+      padding: 0;
+      position: relative;
+      overflow: hidden;
+    }
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -40%; right: -5%;
+      width: 480px; height: 480px;
+      background: radial-gradient(circle, rgba(0,174,239,0.18) 0%, transparent 70%);
+      border-radius: 50%;
+    }
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      height: 5px;
+      background: linear-gradient(90deg, var(--amarelo), var(--azul-gelo), var(--amarelo));
+    }
+    .header-inner {
+      max-width: 1100px; margin: 0 auto;
+      padding: 46px 40px 42px;
+      position: relative; z-index: 1;
+    }
+    .header-badge {
+      display: inline-block;
+      background: rgba(0,174,239,0.2);
+      border: 1px solid rgba(0,174,239,0.4);
+      color: var(--azul-gelo);
+      font-family: 'Montserrat', sans-serif;
+      font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase;
+      padding: 5px 14px; border-radius: 20px; margin-bottom: 18px;
+    }
+    .header h1 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 36px; font-weight: 900; line-height: 1.15;
+      margin-bottom: 10px;
+    }
+    .header h1 .destaque { color: var(--azul-gelo); }
+    .header h1 .frio { color: var(--amarelo); }
+    .header-sub {
+      font-size: 15px; color: rgba(255,255,255,0.75);
+      max-width: 620px; margin-bottom: 24px;
+    }
+    .header-meta { display: flex; gap: 20px; flex-wrap: wrap; }
+    .header-meta-item { display: flex; align-items: center; gap: 8px; font-size: 13px; color: rgba(255,255,255,0.65); }
+    .header-meta-item .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--azul-gelo); flex-shrink: 0; }
+
+    /* ── ALERT BANNER ── */
+    .alert-banner {
+      background: linear-gradient(90deg, var(--azul-splash), var(--azul-medio));
+      color: white; text-align: center;
+      padding: 13px 20px;
+      font-family: 'Montserrat', sans-serif; font-weight: 700; font-size: 14px;
+      border-bottom: 3px solid var(--amarelo);
+    }
+    .alert-banner span { background: var(--amarelo); color: #1A1A00; padding: 2px 10px; border-radius: 4px; margin: 0 5px; }
+
+    /* ── OFFER REFERENCE ── */
+    .offer-ref {
+      background: linear-gradient(135deg, #001A3A, #003B7A);
+      color: white; padding: 22px 32px; border-radius: 14px;
+      margin-bottom: 36px;
+      border: 1px solid rgba(0,174,239,0.2);
+    }
+    .offer-ref-title {
+      font-family: 'Montserrat', sans-serif; font-size: 12px; font-weight: 700;
+      letter-spacing: 1.5px; text-transform: uppercase; color: var(--azul-gelo);
+      margin-bottom: 14px;
+    }
+    .offer-ref-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr)); gap: 10px; }
+    .offer-ref-item {
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 10px; padding: 10px 14px;
+    }
+    .offer-ref-item-name { font-size: 11px; color: rgba(255,255,255,0.55); margin-bottom: 3px; }
+    .offer-ref-item-price { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 16px; color: var(--amarelo); }
+    .offer-ref-item-detail { font-size: 10px; color: rgba(255,255,255,0.4); margin-top: 2px; }
+
+    /* ── WRAPPER ── */
+    .stories-wrapper { max-width: 1100px; margin: 40px auto 60px; padding: 0 40px; }
+    .section-label {
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; text-transform: uppercase; color: var(--texto-suave);
+      margin-bottom: 24px;
+    }
+
+    /* ── SEQUENCE CARD ── */
+    .seq-card {
+      background: white; border-radius: 20px; margin-bottom: 48px;
+      overflow: hidden;
+      box-shadow: 0 4px 28px rgba(0,59,122,0.09);
+      border: 1px solid var(--cinza-borda);
+    }
+
+    .seq-header {
+      padding: 24px 32px 20px;
+      display: flex; align-items: flex-start;
+      justify-content: space-between; gap: 16px;
+      border-bottom: 1px solid var(--cinza-borda);
+      background: linear-gradient(135deg, #E8F4FF 0%, #F5FAFF 100%);
+    }
+
+    .seq-num {
+      font-family: 'Montserrat', sans-serif; font-size: 11px; font-weight: 700;
+      letter-spacing: 2px; color: var(--texto-suave); text-transform: uppercase; margin-bottom: 5px;
+    }
+    .seq-title {
+      font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800;
+      line-height: 1.2; color: var(--texto-escuro);
+    }
+    .seq-title span { display: block; font-size: 13px; font-weight: 500; color: var(--texto-medio); margin-top: 4px; }
+
+    .seq-badges { display: flex; flex-direction: column; align-items: flex-end; gap: 6px; flex-shrink: 0; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 5px;
+      padding: 5px 12px; border-radius: 20px;
+      font-family: 'Montserrat', sans-serif; font-size: 11px;
+      font-weight: 700; letter-spacing: 0.5px; text-transform: uppercase; white-space: nowrap;
+    }
+    .badge-azul    { background: #DCEEFF; color: var(--azul-splash); }
+    .badge-amarelo { background: #FFF8CC; color: #7A5000; }
+    .badge-gelo    { background: #E0F7FF; color: #005A80; }
+    .badge-frames  { background: var(--cinza-claro); color: var(--texto-medio); border: 1px solid var(--cinza-borda); }
+
+    /* ── STORY FRAMES ── */
+    .frames-row {
+      display: grid;
+      gap: 0;
+      border-bottom: 1px solid var(--cinza-borda);
+    }
+    .frames-row-3 { grid-template-columns: repeat(3, 1fr); }
+    .frames-row-4 { grid-template-columns: repeat(4, 1fr); }
+    .frames-row-2 { grid-template-columns: repeat(2, 1fr); }
+
+    .story-frame {
+      padding: 22px 22px 20px;
+      border-right: 1px solid var(--cinza-borda);
+      position: relative;
+    }
+    .story-frame:last-child { border-right: none; }
+
+    .story-frame-num {
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 800;
+      letter-spacing: 1.5px; text-transform: uppercase;
+      color: var(--azul-gelo); margin-bottom: 10px;
+      display: flex; align-items: center; gap: 6px;
+    }
+    .story-frame-num::before {
+      content: '';
+      display: inline-block;
+      width: 20px; height: 3px;
+      background: var(--azul-gelo);
+      border-radius: 2px;
+    }
+
+    .story-visual {
+      background: linear-gradient(135deg, #001A3A, #005BAA);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 14px;
+      min-height: 140px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-visual::before {
+      content: '❄️';
+      position: absolute; top: 8px; right: 10px;
+      font-size: 20px; opacity: 0.4;
+    }
+
+    .story-visual-label {
+      font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px;
+      color: var(--azul-gelo); margin-bottom: 8px;
+    }
+
+    .story-text-main {
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      color: white; line-height: 1.2;
+    }
+    .story-text-main.xl  { font-size: 22px; }
+    .story-text-main.lg  { font-size: 17px; }
+    .story-text-main.md  { font-size: 14px; }
+
+    .story-text-sub {
+      color: var(--amarelo); font-family: 'Montserrat', sans-serif;
+      font-weight: 700; font-size: 13px; margin-top: 6px;
+    }
+    .story-text-body {
+      color: rgba(255,255,255,0.8); font-size: 11px;
+      line-height: 1.5; margin-top: 6px;
+    }
+
+    .story-price-tag {
+      display: inline-block;
+      background: var(--amarelo); color: #1A0000;
+      font-family: 'Montserrat', sans-serif; font-weight: 900;
+      font-size: 18px; padding: 6px 12px; border-radius: 8px;
+      margin-top: 8px;
+    }
+
+    .story-price-small {
+      font-size: 11px; color: rgba(255,255,255,0.65);
+      margin-top: 4px;
+    }
+
+    .story-cta-tag {
+      display: inline-block;
+      background: white; color: var(--azul-splash);
+      font-family: 'Montserrat', sans-serif; font-weight: 800;
+      font-size: 11px; padding: 5px 10px; border-radius: 6px;
+      margin-top: 10px;
+    }
+
+    .story-copy {
+      font-size: 12.5px; color: var(--texto-escuro); line-height: 1.6;
+    }
+
+    .story-copy strong { color: var(--azul-splash); }
+
+    .story-copy .copy-label {
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px; color: var(--azul-gelo);
+      margin-bottom: 6px; margin-top: 0;
+    }
+
+    /* ── LEGEND CHIPS ── */
+    .frame-tags { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
+    .frame-tag {
+      font-family: 'Montserrat', sans-serif; font-size: 9px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 0.5px;
+      padding: 3px 8px; border-radius: 10px;
+    }
+    .ft-visual  { background: #E3F2FD; color: #1565C0; }
+    .ft-copy    { background: #E8F5E9; color: #2E7D32; }
+    .ft-sticker { background: #FFF8E1; color: #E65100; }
+    .ft-cta     { background: #FDECEA; color: #C62828; }
+
+    /* ── SEQ FOOTER ── */
+    .seq-footer {
+      padding: 20px 32px;
+      background: var(--cinza-claro);
+      border-top: 1px solid var(--cinza-borda);
+      display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+    }
+    .footer-box { }
+    .footer-box-label {
+      font-family: 'Montserrat', sans-serif; font-size: 10px; font-weight: 700;
+      text-transform: uppercase; letter-spacing: 1px; color: var(--azul-gelo);
+      margin-bottom: 6px;
+    }
+    .footer-box-content { font-size: 12.5px; color: var(--texto-escuro); line-height: 1.6; white-space: pre-line; }
+    .footer-box.full { grid-column: 1 / -1; }
+    .hook-text { font-family: 'Montserrat', sans-serif; font-weight: 800; font-size: 14px; color: var(--azul-splash); line-height: 1.3; }
+
+    /* ── PRINT / RESPONSIVE ── */
+    @media print { .seq-card { break-inside: avoid; } }
+    @media (max-width: 750px) {
+      .header-inner, .stories-wrapper { padding: 20px 16px; }
+      .header h1 { font-size: 26px; }
+      .frames-row-3, .frames-row-4 { grid-template-columns: 1fr; }
+      .frames-row-2 { grid-template-columns: 1fr; }
+      .seq-footer { grid-template-columns: 1fr; }
+      .seq-header { flex-direction: column; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- ALERT -->
+<div class="alert-banner">
+  ❄️ LIQUIDAÇÃO DE INVERNO — Splash Campinas by iGUi &nbsp;|&nbsp; + de <span>25% OFF</span> &nbsp;|&nbsp; Todas as medidas do modelo Tradicional
+</div>
+
+<!-- HEADER -->
+<div class="header">
+  <div class="header-inner">
+    <div class="header-badge">Splash Campinas — A Pioneira</div>
+    <h1>7 Sequências de <span class="destaque">Stories</span><br><span class="frio">❄️ Liquidação de Inverno</span></h1>
+    <p class="header-sub">Roteiros completos frame a frame — visual, copy, sticker e CTA de cada story. Prontos para produção e entrega ao cliente.</p>
+    <div class="header-meta">
+      <div class="header-meta-item"><span class="dot"></span> + de 25% OFF</div>
+      <div class="header-meta-item"><span class="dot"></span> Tradicional | SPA | Prainha</div>
+      <div class="header-meta-item"><span class="dot"></span> 3,50m a 9,00m</div>
+      <div class="header-meta-item"><span class="dot"></span> Completa + Instalada + Pronta Entrega</div>
+      <div class="header-meta-item"><span class="dot"></span> Entrada a partir de R$990</div>
+    </div>
+  </div>
+</div>
+
+<!-- STORIES WRAPPER -->
+<div class="stories-wrapper" style="margin-top:40px;">
+
+  <!-- OFFER REFERENCE -->
+  <div class="offer-ref">
+    <div class="offer-ref-title">❄️ Preços de referência — Liquidação de Inverno (seleção de medidas)</div>
+    <div class="offer-ref-grid">
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">3,50m Tradicional</div>
+        <div class="offer-ref-item-price">R$ 9.866</div>
+        <div class="offer-ref-item-detail">entrada R$990 | 15x R$815</div>
+      </div>
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">5,00m Tradicional</div>
+        <div class="offer-ref-item-price">R$ 14.046</div>
+        <div class="offer-ref-item-detail">entrada R$2.990 | 15x R$1.015</div>
+      </div>
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">6,00m Tradicional</div>
+        <div class="offer-ref-item-price">R$ 17.471</div>
+        <div class="offer-ref-item-detail">entrada R$4.490 | 15x R$1.189</div>
+      </div>
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">6,00m Com SPA</div>
+        <div class="offer-ref-item-price">R$ 18.470</div>
+        <div class="offer-ref-item-detail">entrada R$5.490 | 15x R$1.189</div>
+      </div>
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">7,00m Tradicional</div>
+        <div class="offer-ref-item-price">R$ 20.637</div>
+        <div class="offer-ref-item-detail">entrada R$5.990 | 15x R$1.341</div>
+      </div>
+      <div class="offer-ref-item">
+        <div class="offer-ref-item-name">8,00m Com SPA</div>
+        <div class="offer-ref-item-price">R$ 27.442</div>
+        <div class="offer-ref-item-detail">entrada R$9.990 | 15x R$1.599</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section-label">As 7 Sequências — Frame a Frame</div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 1 — GANCHO DA PROMOÇÃO                                  -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 01 — 3 Stories</div>
+        <div class="seq-title">
+          "Chegou a Liquidação de Inverno"
+          <span>Abertura da campanha — hook forte que para o dedo e apresenta a promoção</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-azul">Abertura</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <!-- FRAME 1 -->
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags">
+          <span class="frame-tag ft-visual">Visual</span>
+          <span class="frame-tag ft-sticker">Sticker</span>
+        </div>
+        <div class="story-visual">
+          <div class="story-visual-label">Fundo + Título</div>
+          <div class="story-text-main xl">❄️ CHEGOU!</div>
+          <div class="story-text-sub">Liquidação de Inverno</div>
+          <div class="story-text-body">Fundo azul gelo com flocos de neve. Texto explode no centro com efeito de gelo.</div>
+          <div class="story-cta-tag">Sticker: "Desliza 👆"</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>❄️ <strong>A Splash enlouqueceu.</strong><br>Todas as medidas com + de 25% OFF. Tradicional, SPA e Prainha — completas e instaladas.</p>
+        </div>
+      </div>
+
+      <!-- FRAME 2 -->
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags">
+          <span class="frame-tag ft-visual">Visual</span>
+          <span class="frame-tag ft-copy">Copy</span>
+        </div>
+        <div class="story-visual">
+          <div class="story-visual-label">Destaque do Desconto</div>
+          <div class="story-text-main lg">A piscina que você<br>queria tá com</div>
+          <div class="story-price-tag">+ DE 25% OFF</div>
+          <div class="story-text-body">Fundo azul escuro. Elemento de gelo ao redor do badge de desconto. Flocos animados.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Esse é o melhor momento do ano pra investir na sua piscina. No inverno, o preço é diferente — e a entrega é mais rápida. 🏊</p>
+        </div>
+      </div>
+
+      <!-- FRAME 3 -->
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags">
+          <span class="frame-tag ft-cta">CTA</span>
+          <span class="frame-tag ft-sticker">Sticker</span>
+        </div>
+        <div class="story-visual">
+          <div class="story-visual-label">Chamada de Ação</div>
+          <div class="story-text-main lg">Splash Campinas<br>a pioneira.</div>
+          <div class="story-text-sub">Link na bio 👇</div>
+          <div class="story-text-body">Foto real da piscina instalada + logo Splash + badge "Pronta Entrega"</div>
+          <div class="story-cta-tag">Sticker: Enquete — "Você já tem piscina?" SIM / AINDA NÃO</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Chama a gente no WhatsApp. A gente te mostra todas as opções — sem compromisso. 📲</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida (Highlight)</div>
+        <div class="hook-text">❄️ LIQUIDAÇÃO DE INVERNO</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">Usar imagem real de piscina no Story 3. Sticker de enquete no último story aumenta o alcance orgânico. Transição de "arrasta pra cima" ou link ativo para WhatsApp.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 2 — OS MODELOS                                          -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 02 — 3 Stories</div>
+        <div class="seq-title">
+          "Qual modelo é o seu?"
+          <span>Apresenta os 3 modelos — Tradicional, Com SPA e Com Prainha</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-gelo">Produto</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Modelo Tradicional</div>
+          <div class="story-text-main lg">🏊 TRADICIONAL</div>
+          <div class="story-text-sub">O clássico que nunca sai de moda</div>
+          <div class="story-text-body">Foto ou render da piscina Tradicional iGUi. Fundo azul gelo. Tag amarela no topo: "LIQUIDAÇÃO DE INVERNO"</div>
+          <div class="story-price-tag">A partir de R$ 9.866</div>
+          <div class="story-price-small">3,50m | ou entrada R$990</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A piscina Tradicional Splash by iGUi — perfeita para qualquer quintal. Com hidromassagem, cascata e kit de filtragem completo inclusos. ❄️ + de 25% OFF agora.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Modelo Com SPA</div>
+          <div class="story-text-main lg">✨ COM SPA</div>
+          <div class="story-text-sub">O upgrade que sua família merece</div>
+          <div class="story-text-body">Foto ou render da piscina com área de SPA elevada. Luz LED azul. Fundo gradiente azul escuro.</div>
+          <div class="story-price-tag">A partir de R$ 18.470</div>
+          <div class="story-price-small">6,00m Com SPA | ou entrada R$5.490</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Piscina + área de SPA com hidromassagem integrada. Imagine entrar nessa depois de um longo dia. Tudo isso com + de 25% OFF na Liquidação de Inverno. 🌊</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-sticker">Sticker</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Modelo Com Prainha</div>
+          <div class="story-text-main lg">🏖️ COM PRAINHA</div>
+          <div class="story-text-sub">Entrada rasa — família com crianças</div>
+          <div class="story-text-body">Foto ou render da piscina com prainha de entrada. Tom mais leve, alegre. Criança no fundo da imagem.</div>
+          <div class="story-price-tag">A partir de R$ 17.018</div>
+          <div class="story-price-small">6,00m Prainha | ou entrada R$4.990</div>
+          <div class="story-cta-tag">Sticker: "Qual é o seu?" TRADICIONAL / SPA / PRAINHA</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Perfeita pra quem tem crianças — entrada suave, segura e divertida. Três modelos diferentes, todos com + de 25% OFF. Chama pra saber qual encaixa no seu espaço. 📲</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"Qual modelo é o seu?"</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">O sticker de enquete no Story 3 com os 3 modelos gera dados valiosos de audiência além de engajamento. Use fotos reais dos modelos iGUi quando disponível.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 3 — PORTA DE ENTRADA / PREÇO MÍNIMO                    -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 03 — 3 Stories</div>
+        <div class="seq-title">
+          "Você sabia que dá pra entrar por R$990?"
+          <span>Ativa quem acha que é caro — menor preço de entrada da tabela</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-amarelo">Acessibilidade</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Gancho de Preço</div>
+          <div class="story-text-main xl">R$ 990</div>
+          <div class="story-text-sub">É quanto você precisa pra começar</div>
+          <div class="story-text-body">Número grande, amarelo, em fundo azul escuro. Efeito de explosão atrás do número.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Sim. R$990 de entrada é o suficiente pra você sair da Splash Campinas com a sua piscina garantida. ❄️ Liquidação de Inverno.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Detalhe da Oferta</div>
+          <div class="story-text-main md">Piscina 3,50m<br>Tradicional iGUi</div>
+          <div class="story-text-sub" style="font-size:11px;margin-top:4px;">De R$13.730 por</div>
+          <div class="story-price-tag" style="font-size:20px;">R$ 9.866</div>
+          <div class="story-price-small">Entrada R$990 + 15x R$815</div>
+          <div class="story-text-body" style="margin-top:8px;">✅ Hidromassagem inclusa<br>✅ Kit filtragem incluso<br>✅ Instalação inclusa</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A menor medida da Liquidação de Inverno — e ela já vem com hidromassagem, filtragem e instalação completa. Pronta entrega aqui em Campinas.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-cta">CTA</span><span class="frame-tag ft-sticker">Sticker</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Chamada Final</div>
+          <div class="story-text-main lg">Quanto você<br>tem de entrada?</div>
+          <div class="story-text-sub">A gente encontra<br>a medida certa.</div>
+          <div class="story-cta-tag">Sticker: Caixa de pergunta "Me conta!" ou Link WhatsApp</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Não sabe por onde começar? Manda uma mensagem com quanto você quer investir de entrada — a gente te mostra qual piscina encaixa no seu orçamento. 📲</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"Piscina com entrada de R$990?"</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">A caixa de pergunta no Story 3 é muito poderosa — cada resposta é um lead qualificado. Use as respostas para follow-up direto no DM.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 4 — O QUE ESTÁ INCLUSO                                  -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 04 — 4 Stories</div>
+        <div class="seq-title">
+          "Tudo isso vem junto — sem pagar a mais"
+          <span>Detalha item por item o que está incluso — remove objeção de "custo escondido"</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-gelo">Valor / Confiança</span>
+        <span class="badge badge-frames">4 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-4">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 4</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Abertura da Sequência</div>
+          <div class="story-text-main lg">Quando a gente diz<br>"completa"...</div>
+          <div class="story-text-sub">...é literalmente tudo. 👇</div>
+          <div class="story-text-body">Fundo azul com ícone de check verde grande.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Tem gente que acha que "completa e instalada" é só a piscina. Deixa eu te mostrar o que realmente está incluso na Liquidação de Inverno da Splash. ❄️</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 4</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Itens 1 e 2</div>
+          <div class="story-text-main md">💧 HIDROMASSAGEM</div>
+          <div class="story-text-body" style="margin-top:6px;">Jatos de água integrados à piscina — já vem com o produto.</div>
+          <div class="story-text-main md" style="margin-top:12px;">🔄 KIT ASPIRAÇÃO</div>
+          <div class="story-text-body" style="margin-top:6px;">Todo o sistema de limpeza do fundo da piscina já incluso.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Hidromassagem ✅ e Kit de aspiração completo ✅ — sem pagar nenhum real a mais. Isso já está no preço da Liquidação de Inverno.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 4</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Itens 3 e 4</div>
+          <div class="story-text-main md">⚙️ KIT FILTRAGEM COMPLETO</div>
+          <div class="story-text-body" style="margin-top:6px;">Motor, filtro e sistema de circulação de água — 100% incluso.</div>
+          <div class="story-text-main md" style="margin-top:12px;">🏗️ PARTE HIDRÁULICA COMPLETA</div>
+          <div class="story-text-body" style="margin-top:6px;">Tubos, registros, conexões, skimmer e casa de máquinas.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A parte hidráulica toda ✅ — tubos, registros, conexões, skimmer e casa de máquinas. Você não vai receber nenhuma conta surpresa depois. 🚫</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 4 de 4</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span><span class="frame-tag ft-cta">CTA</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Resumo + Preço</div>
+          <div class="story-text-main md">✅ Hidromassagem<br>✅ Kit aspiração<br>✅ Kit filtragem<br>✅ Toda a hidráulica<br>✅ Mão de obra<br>✅ Frete</div>
+          <div class="story-text-sub" style="margin-top:10px;">TUDO ISSO a partir de</div>
+          <div class="story-price-tag">R$ 9.866</div>
+          <div class="story-cta-tag">📲 Chama no WhatsApp</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Com tudo isso incluso a partir de R$9.866 — ou entrada de R$990. É a Splash Campinas, a pioneira. Link na bio. ❄️</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"Sabe o que está incluso no preço?"</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">Usar ícones claros em cada item. A progressão item a item mantém o usuário deslizando. O Story 4 com o resumo completo é o mais compartilhável — vale usar como "salvar".</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 5 — TABELA DAS MEDIDAS MAIS PEDIDAS                    -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 05 — 3 Stories</div>
+        <div class="seq-title">
+          "Veja as medidas mais pedidas"
+          <span>Tabela reduzida com os preços das medidas campeãs — 6m, 7m e 8m nas 3 versões</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-azul">Preços</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Medidas 6 metros</div>
+          <div class="story-text-main lg">6 METROS</div>
+          <div class="story-text-body" style="margin-top:8px; line-height:2;">
+            🏊 Tradicional: <strong style="color:var(--amarelo)">R$17.471</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$4.490)</span><br>
+            🏖️ Prainha: <strong style="color:var(--amarelo)">R$17.018</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$4.990)</span><br>
+            ✨ Com SPA: <strong style="color:var(--amarelo)">R$18.470</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$5.490)</span>
+          </div>
+          <div class="story-cta-tag">Swipe 👉</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>6 metros — a medida mais pedida aqui na Splash. Três versões, todos com + de 25% OFF na Liquidação de Inverno. ❄️</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Medidas 7 e 7,50 metros</div>
+          <div class="story-text-main lg">7 METROS</div>
+          <div class="story-text-body" style="margin-top:8px; line-height:2;">
+            🏊 Tradicional: <strong style="color:var(--amarelo)">R$20.637</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$5.990)</span><br>
+            🏖️ Prainha: <strong style="color:var(--amarelo)">R$20.271</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$5.990)</span><br>
+            ✨ Com SPA: <strong style="color:var(--amarelo)">R$22.957</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$6.990)</span>
+          </div>
+          <div style="margin-top:10px;">
+          <div class="story-text-main md">7,50m Tradicional</div>
+          <div class="story-text-body"><strong style="color:var(--amarelo)">R$22.655</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$6.990)</span></div>
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Quer mais espaço? 7 metros dá outro nível de experiência — dá pra nadar, receber amigos, colocar uma ilha flutuante. Com SPA ainda? Espetacular. 🌊</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-cta">CTA</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Medidas 8 e 9 metros</div>
+          <div class="story-text-main lg">8 e 9 METROS</div>
+          <div class="story-text-body" style="margin-top:8px; line-height:2;">
+            🏊 8m Trad.: <strong style="color:var(--amarelo)">R$25.255</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$8.990)</span><br>
+            🏖️ 8m Prainha: <strong style="color:var(--amarelo)">R$24.529</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$8.990)</span><br>
+            ✨ 8m c/ SPA: <strong style="color:var(--amarelo)">R$27.442</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$9.990)</span><br>
+            🏊 9m Trad.: <strong style="color:var(--amarelo)">R$29.805</strong> <span style="font-size:10px;color:rgba(255,255,255,0.5)">(entrada R$11.990)</span>
+          </div>
+          <div class="story-cta-tag">📲 Qual é a sua? Chama!</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A maior da tabela — 9 metros por R$29.805. E todas estão com + de 25% OFF. Tabela completa no link da bio. Chama pra saber qual encaixa no seu quintal. ❄️</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"Veja as medidas + preços da Liquidação"</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">Essa sequência tem alta intenção de salvamento — o usuário salva pra comparar depois. Deixar os números visíveis e limpos é fundamental. Fundo simples, sem poluição visual.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 6 — POR QUE COMPRAR NO INVERNO?                        -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 06 — 3 Stories</div>
+        <div class="seq-title">
+          "Por que o inverno é a hora certa?"
+          <span>Educacional — converte o cético que acha estranho comprar piscina no frio</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-gelo">Educacional</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Gancho do Argumento</div>
+          <div class="story-text-main lg">"Comprar piscina no inverno?"</div>
+          <div class="story-text-sub" style="margin-top:8px;">Essa é exatamente a pergunta certa. 🎯</div>
+          <div class="story-text-body">Fundo azul gelo com floco grande decorativo. Tom de "deixa eu te explicar".</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A maioria das pessoas acha estranha a ideia de comprar piscina no inverno. E é exatamente por isso que você vai sair na frente. 👇</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Os 3 Motivos</div>
+          <div class="story-text-main md" style="margin-bottom:8px;">Por que agora?</div>
+          <div class="story-text-body" style="line-height:2.2;">
+            ❄️ <strong style="color:var(--amarelo)">Preço:</strong> Liquidação exclusiva de inverno<br>
+            🚚 <strong style="color:var(--amarelo)">Entrega:</strong> Mais rápida — menos demanda<br>
+            ☀️ <strong style="color:var(--amarelo)">Verão:</strong> Pronta pra usar quando o calor voltar
+          </div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Quem compra no inverno: paga menos ✅, espera menos ✅ e chega no verão com piscina pronta ✅. Quem espera o verão: paga mais e espera fila.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-cta">CTA</span><span class="frame-tag ft-sticker">Sticker</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Virada + CTA</div>
+          <div class="story-text-main lg">Dezembro chega.<br>Você vai estar<br>pronto?</div>
+          <div class="story-text-body" style="margin-top:8px;">Piscina instalada, água azul, família curtindo. Foto aspiracional.</div>
+          <div class="story-cta-tag">Sticker: Contagem regressiva até 29/06</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A Liquidação de Inverno da Splash Campinas é por tempo limitado. Não deixa o verão chegar sem a sua piscina. 📲 Link na bio.</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"Por que comprar piscina no inverno?"</div>
+      </div>
+      <div class="footer-box">
+        <div class="footer-box-label">🎬 Direção</div>
+        <div class="footer-box-content">A contagem regressiva no Story 3 (sticker nativo do Instagram) cria urgência visual de forma automática. Configurar com data de 29/06. Essa sequência converte bem em remarketing.</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ================================================================ -->
+  <!-- SEQUÊNCIA 7 — CTA FINAL / URGÊNCIA DE ENCERRAMENTO              -->
+  <!-- ================================================================ -->
+  <div class="seq-card">
+    <div class="seq-header">
+      <div>
+        <div class="seq-num">Sequência 07 — 3 Stories</div>
+        <div class="seq-title">
+          "Últimos dias. Decida agora."
+          <span>Fechamento da campanha — urgência real, CTA direto, sem rodeio</span>
+        </div>
+      </div>
+      <div class="seq-badges">
+        <span class="badge badge-amarelo">Urgência / CTA</span>
+        <span class="badge badge-frames">3 frames</span>
+      </div>
+    </div>
+
+    <div class="frames-row frames-row-3">
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 1 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-visual">Visual</span><span class="frame-tag ft-sticker">Sticker</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Contagem Final</div>
+          <div class="story-text-main xl" style="color:var(--amarelo);">ÚLTIMOS<br>DIAS</div>
+          <div class="story-text-sub">Liquidação de Inverno encerra em breve</div>
+          <div class="story-text-body" style="margin-top:8px;">Fundo azul escuro. Floco de neve grande atrás do texto. Efeito urgente.</div>
+          <div class="story-cta-tag">Sticker: Contagem regressiva 29/06</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A Liquidação de Inverno da Splash Campinas está nos últimos dias. + de 25% OFF na Linha Tradicional, SPA e Prainha. Depois dessa data, acabou. ❄️</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 2 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-copy">Copy</span><span class="frame-tag ft-visual">Visual</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">Consequência de Não Decidir</div>
+          <div class="story-text-main lg">Depois do prazo:<br>preço volta.<br>Desconto some.</div>
+          <div class="story-text-body" style="margin-top:8px;">Visual de "risco" ou "X" sobre o preço antigo. Fundo vermelho escuro ou azul com elemento de alerta.</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>Simples assim: quem fechar essa semana leva com + de 25% OFF e pronta entrega. Quem esperar, paga o preço cheio e entra na fila normal. A escolha é sua.</p>
+        </div>
+      </div>
+
+      <div class="story-frame">
+        <div class="story-frame-num">Story 3 de 3</div>
+        <div class="frame-tags"><span class="frame-tag ft-cta">CTA</span><span class="frame-tag ft-sticker">Sticker</span></div>
+        <div class="story-visual">
+          <div class="story-visual-label">CTA Final</div>
+          <div class="story-text-main lg">Splash Campinas<br>A Pioneira. 🏆</div>
+          <div class="story-text-sub">Chama agora no WhatsApp</div>
+          <div class="story-price-tag" style="font-size:14px;">Entrada a partir de R$ 990</div>
+          <div class="story-text-body" style="margin-top:8px;">Logo Splash Piscinas + iGUi. Foto da piscina instalada. Badge "Pronta Entrega".</div>
+          <div class="story-cta-tag">Link: WhatsApp direto + "Link na bio"</div>
+        </div>
+        <div class="story-copy">
+          <p class="copy-label">Copy sobreposto</p>
+          <p>A menor entrada é R$990. A maior economia é agora. Chama a gente — a gente te atende na hora. 📲 Splash Campinas, a pioneira em Campinas. ❄️</p>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="seq-footer">
+      <div class="footer-box">
+        <div class="footer-box-label">🖼️ Capa Sugerida</div>
+        <div class="hook-text">"❄️ Últimos dias — Liquidação de Inverno"</div>
+      </div>
+      <div class="footer-box full">
+        <div class="footer-box-label">🎬 Direção Geral</div>
+        <div class="footer-box-content">Essa sequência deve ir ao ar nos últimos 3 dias da promoção. O sticker de contagem regressiva no Story 1 é fundamental. O Story 3 deve ter link ativo direto para o WhatsApp. Boostar esse conjunto como Ads de Stories nos dias finais maximiza conversão.</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<!-- PAGE FOOTER -->
+<div style="background:#001A3A; color:rgba(255,255,255,0.5); text-align:center; padding:28px 40px; font-size:12px;">
+  <strong style="color:var(--azul-gelo)">Splash Campinas by iGUi — A Pioneira</strong> — Liquidação de Inverno | 7 Sequências de Stories<br>
+  Material de uso interno para produção de conteúdo. Crédito sujeito à aprovação. Preço base São Paulo. Medidas aproximadas.
+</div>
+
+</body>
+</html>
